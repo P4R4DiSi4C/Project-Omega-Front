@@ -1,4 +1,4 @@
-# nash front-end base
+# PROJECT OMEGA
 
 ## dev server
 ```sh
