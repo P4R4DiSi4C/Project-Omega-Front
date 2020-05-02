@@ -9,80 +9,40 @@ export default {
     display:flex;
     align-items:center;
     width:100%;
-    justify-content:space-between;
+    justify-content:flex-start;
 
-    border-style:solid;
+    border:solid;
     border-color:green;
   `,
   
   Logo: Styled.img`
-    height:64px;
-    height:auto;
-    margin-left:16px;
-    margin-right:16px;
+    width: 5%;
 
-    border-style:solid;
-    border-color:blue;
   `,
 
-  FormSearch: Styled.form`
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #c3e0b6;
-    width: 30rem;
-    padding: 2rem;
-    height: 2rem;
-    border-radius: 10rem;
-    transition: width 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-    border-style:solid;
-    border-color:blue;
-  `,
-
-  Search: Styled.input`
-    font-size: 24px;
-    line-height: 1;
-    background-color: transparent;
-    width: 100%;
-    border: none;
-    color: black;
-    transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
-    &::placeholder {
-      color: black;
-    }
+  Menu: Styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    
+    margin-left:auto;
   `,
 
   LoginBtn: Styled.button`
-    width: 220px;
-    height:50px;  
-    border-radius: 4px;
-    font-size: 24px;
-    background: #c3e0b6;
-    color:black;
-    border:0px transparent;  
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    height: 35px;
+    padding: 0 8px;
+    color: #09B1BA;
+    display: block;
+    box-sizing: border-box;
     text-align: center;
-    margin:5px;
-    display: inline-block;
-
-    &:hover{
-        opacity: 0.6;
-    }           
-
-    border:3px;
-    border-style:solid!important;
-    border-color:blue!important;
-  `,
-
-  ActiveLink: Styled(ActiveLink)`
-    font-size: 14px;
-    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    outline: 0;
   `
 };

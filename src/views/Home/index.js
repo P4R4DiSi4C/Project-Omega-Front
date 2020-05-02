@@ -2,10 +2,9 @@
 import React from 'react';
 
 // components
-import Box from '../../components/Box';
 
 export default () => {
   return (
-    <Box>home</Box>
+    <div>home</div>
   );
 };
