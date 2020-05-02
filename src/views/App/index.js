@@ -5,13 +5,27 @@ import Router from '../../router';
 
 // components
 import Box from '../../components/Box';
-import Navbar from '../../components/Navbar';
+import Header from '../../components/Header';
+
+import Container from '../../components/Container';
 
 export default () => {
   const router = useRoutes(Router);
 
   return (
-    <Box
+    <Container>
+      <Header.Layout>
+        <Header.Logo src={'/img/logo.png'}/>
+        <Header.FormSearch>
+          <Header.Search placeholder="Trouver un article ..." />
+        </Header.FormSearch>
+        <Header.LoginBtn>
+          Se connecter
+        </Header.LoginBtn>
+      </Header.Layout>
+    </Container>
+
+    /*<Box
       height="100vh"
       display="flex"
       justifyContent="center"
@@ -22,6 +36,6 @@ export default () => {
         <Navbar.ActiveLink href="/about" exact>About</Navbar.ActiveLink>
       </Navbar.Layout>
       {router}
-    </Box>
+    </Box>*/
   );
 };
