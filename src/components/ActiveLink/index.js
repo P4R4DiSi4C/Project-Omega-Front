@@ -9,7 +9,7 @@ export default ({ className, children, href, exact }) => {
 
   const ActiveLink = Styled(A)`
     text-decoration: none;
-    color: ${active ? 'green' : 'black'};
+    color: ${active ? '#f7cc2f' : '#bbb'};
   `;
 
   return (

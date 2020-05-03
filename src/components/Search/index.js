@@ -18,11 +18,18 @@ export default (props) => {
 };
 
 const Layout = Styled.div`
-    width: 50%;
-    margin-left:5%;
+    display:flex;
+    align-items:center;
+    width:100%;
+    justify-content:center;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 `;
 
 const Content = Styled.div`
+    width:50%;
     height:35px;
     border-radius: 4px;    
     display: flex;
@@ -35,6 +42,8 @@ const Bar = Styled.input`
     border: none;
     flex: 1;
     padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:focus{
         outline:none;
