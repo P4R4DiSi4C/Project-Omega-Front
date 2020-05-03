@@ -3,27 +3,21 @@ import React from 'react'
 // libs
 import Styled from 'styled-components';
 
+import Flex from '../../Flex';
 import Activelink from '../../ActiveLink';
 import VDivider from '../../VerticalDivider';
 
 export default () => {
     return (
-        <Layout>
+        <Flex percentage="50%" align="center">
             <ActiveLink href="/" exact>Home</ActiveLink>
             <VDivider />
             <ActiveLink href="/about" exact>Home</ActiveLink>
             <VDivider />
             <ActiveLink href="/about" exact>Home</ActiveLink>
-        </Layout>
+        </Flex>
     )
 };
-
-const Layout = Styled.div`
-    display:flex;
-    align-items:center;
-    width:50%;
-    justify-content:center;
-`;
 
 const ActiveLink = Styled(Activelink)`
     padding:12px 16px;

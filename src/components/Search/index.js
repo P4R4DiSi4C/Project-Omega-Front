@@ -26,6 +26,7 @@ const Layout = Styled.div`
     border-bottom: 1px solid #bbb;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
+    margin-bottom:1em;
 `;
 
 const Content = Styled.div`

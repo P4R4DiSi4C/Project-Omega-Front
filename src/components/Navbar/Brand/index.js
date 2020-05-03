@@ -1,24 +1,15 @@
 import React from 'react'
-import styled from "styled-components";
+import Styled from "styled-components";
+import Flex from '../../Flex';
 
+export default () => {
+    return (
+        <Flex percentage="20%" align="flex-start">
+            <Image src={"/img/logo.png"} alt="Company Logo" />
+        </Flex>
+    )
+};
 
-const Brand = () => {
-  return (
-    <Layout>
-      <Image src={"/img/logo.png"} alt="Company Logo" />
-    </Layout>
-  )
-}
-
-export default Brand
-
-const Layout = styled.div`
-  display:flex;
-  align-items:center;
-  width:20%;
-  justify-content:flex-start  ;
-`;
-
-const Image = styled.img`
+const Image = Styled.img`
     width:20%;
 `;

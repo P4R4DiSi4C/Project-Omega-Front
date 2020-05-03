@@ -10,15 +10,15 @@ import Menu from './Menu';
 
 export default () => {
   return (
-    <NavBar>
+    <Layout>
       <Brand />
       <Links />
       <Menu />
-    </NavBar>
+    </Layout>
   )
 };
 
-const NavBar = Styled.div`
+const Layout = Styled.div`
     display:flex;
     align-items:center;
     width:100%;
