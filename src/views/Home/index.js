@@ -1,11 +1,18 @@
 // libs
 import React from 'react';
-import HomeWelcome from '../../components/Home/Welcome';
 
 // components
+import HomeWelcome from '../../components/Home/Welcome';
+import HomeSponsored from '../../components/Home/Sponsored';
+import Divider from '../../components/Divider'
 
 export default () => {
   return (
-    <HomeWelcome/>
+    <div>
+        <HomeWelcome/>
+        <Divider />
+        <HomeSponsored/>
+        <Divider />
+    </div>
   );
 };

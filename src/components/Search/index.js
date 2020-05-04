@@ -5,23 +5,22 @@ import Styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
+// components
+import Flex from '../Flex';
 
-export default (props) => {
+export default () => {
     return (
-        <Layout>
+        <Layout percentage="100%" align="center">
             <Content>
                 <Icon icon={faSearch} />
-                <Bar {...props} />
+                <Bar />
             </Content>
         </Layout>
     )
 };
 
-const Layout = Styled.div`
-    display:flex;
-    align-items:center;
-    width:100%;
-    justify-content:center;
+
+const Layout = Styled(Flex)`
     border-top: 1px solid #bbb;
     border-bottom: 1px solid #bbb;
     padding-top: 0.3em;

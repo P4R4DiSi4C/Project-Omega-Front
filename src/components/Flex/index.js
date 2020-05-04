@@ -6,4 +6,5 @@ export default Styled.div`
     align-items:center;
     width:${props => props.percentage};
     justify-content:${props => props.align};
+    flex-direction:${props => props.direction ? props.direction : "row"};
 `;
