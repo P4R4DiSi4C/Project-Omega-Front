@@ -4,14 +4,17 @@ import React from 'react';
 // components
 import HomeWelcome from '../../components/Home/Welcome';
 import HomeSponsored from '../../components/Home/Sponsored';
+import HomeTrending from '../../components/Home/Trending';
 import Divider from '../../components/Divider'
 
 export default () => {
   return (
     <div>
-        <HomeWelcome/>
+        <HomeWelcome />
         <Divider />
-        <HomeSponsored/>
+        <HomeSponsored />
+        <Divider />
+        <HomeTrending />
         <Divider />
     </div>
   );
