@@ -17,18 +17,22 @@ export default () => {
                     <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> Magasin vedette: Alice's clothes
                 </P>
             </Flex>
-            <Flex percentage="100%" align="space-between" style={{marginTop: "1em"}}>
+            <FlexProd percentage="100%" align="space-between" wrap="wrap">
                 <Product src="/img/product1.jpg" data={{price:10,wear:5,size:"S/28",store:"Zara"}}/>
                 <Product src="/img/product2.jpg" data={{price:15,wear:1,size:"M/32",store:"Zara"}}/>
                 <Product src="/img/product3.jpg" data={{price:20,wear:10,size:"L/36",store:"Zara"}}/>
                 <Product src="/img/product1.jpg" data={{price:25,wear:20,size:"XXXL/46",store:"Zara"}}/>
-            </Flex>
+            </FlexProd>
         </Flex>
     )
 };
 
 const P = Styled.p`
-    font-size:1.3vw;
+    font-size:20px;
     font-weight:lighter;
     margin:0em;
+`;
+
+const FlexProd = Styled(Flex)`
+    margin-top:1em;
 `;
