@@ -5,7 +5,8 @@ import React from 'react';
 import HomeWelcome from '../../components/Home/Welcome';
 import HomeSponsored from '../../components/Home/Sponsored';
 import HomeTrending from '../../components/Home/Trending';
-import Divider from '../../components/Divider'
+import HomeCategories from '../../components/Home/Categories';
+import Divider from '../../components/Divider';
 
 export default () => {
   return (
@@ -16,6 +17,7 @@ export default () => {
         <Divider />
         <HomeTrending />
         <Divider />
+        <HomeCategories />
     </div>
   );
 };

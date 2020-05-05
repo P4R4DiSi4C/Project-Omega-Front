@@ -7,13 +7,15 @@ import Flex from '../../Flex';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStore } from '@fortawesome/free-solid-svg-icons'
 
+import H3 from '../../H3';
+
 export default ({src, data, display_store_name}) => {
     return (
-        <Flex percentage="20%" mobile="45%" align="flex-start" direction="column">
+        <Flex percentage="20%" mobile="45%" align="flex-start" align_items="flex-start" direction="column">
             {display_store_name &&
-                <P>
+                <H3>
                     <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> {data.author_store_name}
-                </P>       
+                </H3>       
             }
             <Image src={src} />
             <Table className="tableprod">
@@ -31,13 +33,6 @@ export default ({src, data, display_store_name}) => {
         </Flex>
     )
 };
-
-const P = Styled.p`
-    font-size:20px;
-    font-weight:lighter;
-    margin:0em;
-    width:100%;
-`;
 
 const Image = Styled.img`
     width:100%;

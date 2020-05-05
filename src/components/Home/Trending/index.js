@@ -8,14 +8,15 @@ import { faFire } from '@fortawesome/free-solid-svg-icons'
 // components
 import Flex from '../../Flex';
 import Product from '../Product';
+import H2 from '../../H2';
 
 export default () => {
     return (
         <Flex percentage="100%" align="flex-start" direction="column">
             <Flex percentage="100%" align="flex-start">
-                <P>
+                <H2>
                     <FontAwesomeIcon icon={faFire} color="#f7cc2f"/> Produits phares
-                </P>
+                </H2>
             </Flex>
             <FlexProd percentage="100%" align="space-between" wrap="wrap">
                 <Product src="/img/product3.jpg" display_store_name data={{author_store_name:"Wesh",price:10,wear:5,size:"S/28",store:"Zara"}}/>
@@ -26,12 +27,6 @@ export default () => {
         </Flex>
     )
 };
-
-const P = Styled.p`
-    font-size:24px;
-    font-weight:lighter;
-    margin:0em;
-`;
 
 const FlexProd = Styled(Flex)`
     margin-top:1em;
