@@ -9,13 +9,13 @@ import VDivider from '../../VerticalDivider';
 
 export default () => {
     return (
-        <Flex percentage="50%" align="center">
+        <FlexLinks percentage="50%" mobile="100%" align="center" mobile_align="center">
             <ActiveLink href="/" exact>Home</ActiveLink>
             <VDivider />
             <ActiveLink href="/about" exact>Home</ActiveLink>
             <VDivider />
             <ActiveLink href="/about" exact>Home</ActiveLink>
-        </Flex>
+        </FlexLinks>
     )
 };
 
@@ -24,4 +24,13 @@ const ActiveLink = Styled(Activelink)`
     &:hover{
         background-color:rgba(17,17,17,0.02)
     }
-  `;
+`;
+
+const FlexLinks = Styled(Flex)`
+    order:1;
+
+    @media (max-width: 768px) {
+        order:3;
+        flex-direction:column;
+    }
+`;

@@ -4,11 +4,15 @@ import Flex from '../../Flex';
 
 export default () => {
     return (
-        <Flex percentage="20%" align="flex-start">
+        <BrandFlex percentage="20%" mobile="80%" align="flex-start">
             <Image src={"/img/logo.png"} alt="Company Logo" />
-        </Flex>
+        </BrandFlex>
     )
 };
+
+const BrandFlex = Styled(Flex)`
+    order:0;
+`;
 
 const Image = Styled.img`
     width:20%;
