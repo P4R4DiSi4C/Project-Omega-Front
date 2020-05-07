@@ -9,14 +9,22 @@ import { faStore } from '@fortawesome/free-solid-svg-icons'
 import Flex from '../../Flex';
 import Product from '../Product';
 import H2 from '../../H2';
+import H3 from '../../H3';
 
 export default () => {
     return (
         <Flex percentage="100%" align="flex-start" direction="column">
-            <Flex percentage="100%" align="flex-start">
-                <H2>
-                    <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> Magasin vedette: Alice's clothes
-                </H2>
+            <Flex percentage="100%" align="flex-start" wrap="wrap">
+                <Flex percentage="25%" mobile="100%" mobile_align="center">
+                    <H2>
+                        <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> MAGASIN VEDETTE
+                    </H2>
+                </Flex>
+                <Flex mobile="100%" mobile_align="center">
+                    <H3>
+                        Alice's Clothes
+                    </H3>
+                </Flex>
             </Flex>
             <FlexProd percentage="100%" align="space-between" wrap="wrap">
                 <Product src="/img/product1.jpg" data={{author_store_name:"Alice's Clothes",price:10,wear:5,size:"S/28",store:"Zara"}}/>

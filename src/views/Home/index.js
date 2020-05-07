@@ -18,6 +18,7 @@ export default () => {
         <HomeTrending />
         <Divider />
         <HomeCategories />
+        <Divider />
     </div>
   );
 };

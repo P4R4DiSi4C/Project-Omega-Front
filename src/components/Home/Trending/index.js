@@ -13,9 +13,9 @@ import H2 from '../../H2';
 export default () => {
     return (
         <Flex percentage="100%" align="flex-start" direction="column">
-            <Flex percentage="100%" align="flex-start">
+            <Flex percentage="100%" align="flex-start" mobile_align="center">
                 <H2>
-                    <FontAwesomeIcon icon={faFire} color="#f7cc2f"/> Produits phares
+                    <FontAwesomeIcon icon={faFire} color="#f7cc2f"/> PRODUITS PHARES
                 </H2>
             </Flex>
             <FlexProd percentage="100%" align="space-between" wrap="wrap">

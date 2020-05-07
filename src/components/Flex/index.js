@@ -11,5 +11,6 @@ export default Styled.div`
 
     @media (max-width: 768px) {
         width:${props => props.mobile ? props.mobile : props.percentage};
+        justify-content:${props => props.mobile_align ? props.mobile_align : props.align};
     }
 `;

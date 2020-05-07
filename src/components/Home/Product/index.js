@@ -40,9 +40,13 @@ const Image = Styled.img`
 
 const Table = Styled.table`
     width: 100%;
-    margin-top:1em;
-    font-size:16px;
+    font-size:1rem;
     font-weight:lighter;
+    margin-top:1em;
+    
+    @media (max-width: 768px) {
+        margin-top:0em;
+    }
 `;
 
 const Td = Styled.td`
