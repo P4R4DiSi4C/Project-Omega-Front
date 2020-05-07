@@ -30,10 +30,14 @@ const Text = Styled.div`
     transform: translateY(-50%);
     width: 100%;
 
-    font-size: 4vw;
+    font-size: 3rem;
     color: #fcfcfc;
     text-decoration: none solid rgb(252, 252, 252);
     text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+    }
 `;
 
 const Image = Styled.img`
