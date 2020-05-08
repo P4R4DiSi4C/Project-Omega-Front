@@ -4,16 +4,25 @@ import React from 'react'
 import Styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import Flex from '../../Flex';
 
-export default () => {
+export default ({is_extended, toggle}) => {
     return (
         <>
-            <FlexBtn percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+            <FlexBtnDesktop percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
                     <Btn>Connexion</Btn>
-            </FlexBtn>
+            </FlexBtnDesktop>
+
+            {is_extended &&
+                <FlexBtnMobile percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+                    <Btn>Connexion</Btn>
+                </FlexBtnMobile>
+            }
+
             <FlexHamburger percentage="20%" align="flex-end">
-                <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={is_extended ? faTimes : faBars} onClick={() => toggle()} />
             </FlexHamburger>
         </>
     )
@@ -24,6 +33,18 @@ const FlexBtn = Styled(Flex)`
 
     @media (max-width: 768px) {
         order:1;
+    }
+`;
+
+const FlexBtnDesktop = Styled(FlexBtn)`
+    @media (max-width: 768px) {
+        display:none;
+    }
+`;
+
+const FlexBtnMobile = Styled(FlexBtn)`
+    @media (min-width: 768px) {
+        display:none;
     }
 `;
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useCallback} from 'react';
 
 // libs
 import Styled from 'styled-components';
@@ -10,13 +10,19 @@ import Menu from './Menu';
 
 
 export default () => {
-  return (
-    <Layout>
-      <Brand />
-      <Links />
-      <Menu />
-    </Layout>
-  )
+    const [extended, setExtended] = useState(false);
+
+    const toggleNavbar = useCallback(() => {
+        setExtended(!extended)
+    }, [extended]);
+
+    return (
+        <Layout>
+            <Brand />
+            <Links is_extended={extended} />
+            <Menu toggle={toggleNavbar} is_extended={extended} />
+        </Layout>
+    )
 };
 
 const Layout = Styled.nav`
