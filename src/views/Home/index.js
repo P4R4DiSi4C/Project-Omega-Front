@@ -10,7 +10,7 @@ import Divider from '../../components/Divider';
 
 export default () => {
   return (
-    <div>
+    <>
         <HomeWelcome />
         <Divider />
         <HomeSponsored />
@@ -19,6 +19,6 @@ export default () => {
         <Divider />
         <HomeCategories />
         <Divider />
-    </div>
+    </>
   );
 };

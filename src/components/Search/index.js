@@ -8,12 +8,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 // components
 import Flex from '../Flex';
 
-export default () => {
+export default (props) => {
     return (
         <Layout percentage="100%" align="center">
             <Content>
                 <Icon icon={faSearch} />
-                <Bar />
+                <Bar placeholder={props.placeholder} />
             </Content>
         </Layout>
     )

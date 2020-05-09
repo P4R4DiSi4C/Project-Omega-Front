@@ -2,28 +2,31 @@ import React from 'react';
 
 // libs
 import Styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStore } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStore } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight} from '@fortawesome/free-solid-svg-icons';
+
+import { navigate } from 'hookrouter';
 
 // components
 import Flex from '../../Flex';
 import Product from '../Product';
 import H2 from '../../H2';
-import H3 from '../../H3';
+import Button from '../../Button';
 
 export default () => {
     return (
         <Flex percentage="100%" align="flex-start" direction="column">
-            <Flex percentage="100%" align="flex-start" wrap="wrap">
-                <Flex percentage="25%" mobile="100%" mobile_align="center">
+            <Flex percentage="100%" align="space-between" wrap="wrap">
+                <Flex mobile="100%" mobile_align="center">
                     <H2>
                         <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> MAGASIN VEDETTE
                     </H2>
                 </Flex>
                 <Flex mobile="100%" mobile_align="center">
-                    <H3>
-                        Alice's Clothes
-                    </H3>
+                    <ButtonSponso onClick={() => navigate("/store/1")} color="#f7cc2f">
+                        Alice's Clothes <FontAwesomeIcon icon={faChevronRight} />
+                    </ButtonSponso>
                 </Flex>
             </Flex>
             <FlexProd percentage="100%" align="space-between" wrap="wrap">
@@ -38,4 +41,8 @@ export default () => {
 
 const FlexProd = Styled(Flex)`
     margin-top:1em;
+`;
+
+const ButtonSponso = Styled(Button)`
+    font-size: 1.4rem;
 `;

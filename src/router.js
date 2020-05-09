@@ -3,9 +3,9 @@ import React from 'react';
 
 // views
 import Home from './views/Home';
-import About from './views/About';
+import Store from './views/Store';
 
 export default {
   '/': () => <Home />,
-  '/about': () => <About />
+  '/store/:id': ({id}) => <Store store_id={id}/>
 };

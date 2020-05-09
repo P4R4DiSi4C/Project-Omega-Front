@@ -5,19 +5,19 @@ import Styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-
+import Button from '../../Button';
 import Flex from '../../Flex';
 
 export default ({is_extended, toggle}) => {
     return (
         <>
             <FlexBtnDesktop percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
-                    <Btn>Connexion</Btn>
+                    <Button color="teal">Connexion</Button>
             </FlexBtnDesktop>
 
             {is_extended &&
                 <FlexBtnMobile percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
-                    <Btn>Connexion</Btn>
+                    <Button color="teal">Connexion</Button>
                 </FlexBtnMobile>
             }
 
@@ -54,17 +54,5 @@ const FlexHamburger = Styled(Flex)`
 
     @media (max-width: 768px) {
         display:block;
-    }
-`;
-
-const Btn = Styled.button`
-    background: teal;
-    border: 1px #006d6d solid;
-    color: white;
-    width: auto;
-
-    &&:hover{
-        opacity:0.8;
-        cursor:pointer;
     }
 `;
