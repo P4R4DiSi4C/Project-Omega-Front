@@ -2,8 +2,9 @@ import React from 'react'
 
 // libs
 import Styled from 'styled-components';
+
+// icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 // components
 import Flex from '../Flex';
@@ -12,7 +13,7 @@ export default (props) => {
     return (
         <Layout percentage="100%" align="center">
             <Content>
-                <Icon icon={faSearch} />
+                <Icon icon="search" />
                 <Bar placeholder={props.placeholder} />
             </Content>
         </Layout>

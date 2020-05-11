@@ -2,9 +2,11 @@ import React from 'react'
 
 // libs
 import Styled from 'styled-components';
+
+// icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+// components
 import Button from '../../Button';
 import Flex from '../../Flex';
 
@@ -22,7 +24,7 @@ export default ({is_extended, toggle}) => {
             }
 
             <FlexHamburger percentage="20%" align="flex-end">
-                <FontAwesomeIcon icon={is_extended ? faTimes : faBars} onClick={() => toggle()} />
+                <FontAwesomeIcon icon={is_extended ? "times" : "bars"} onClick={() => toggle()} />
             </FlexHamburger>
         </>
     )
