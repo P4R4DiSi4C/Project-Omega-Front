@@ -10,6 +10,7 @@ import App from './views/App';
 import 'sanitize.css';
 import 'sanitize.css/forms.css';
 import 'sanitize.css/typography.css';
+import './fontawesome.js';
 
 // theme
 const theme = {

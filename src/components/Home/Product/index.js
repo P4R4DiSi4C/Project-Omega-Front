@@ -4,9 +4,10 @@ import React from 'react';
 import Styled from 'styled-components';
 import Flex from '../../Flex';
 
+// icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStore } from '@fortawesome/free-solid-svg-icons'
 
+// components
 import H3 from '../../H3';
 
 export default ({src, data, display_store_name}) => {
@@ -14,7 +15,7 @@ export default ({src, data, display_store_name}) => {
         <Flex percentage="20%" mobile="45%" align="flex-start" align_items="flex-start" direction="column">
             {display_store_name &&
                 <H3>
-                    <FontAwesomeIcon icon={faStore} color="#f7cc2f"/> {data.author_store_name}
+                    <FontAwesomeIcon icon="store" color="#f7cc2f"/> {data.author_store_name}
                 </H3>       
             }
             <Image src={src} />

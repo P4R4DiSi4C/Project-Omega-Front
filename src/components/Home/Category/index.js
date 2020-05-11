@@ -23,14 +23,14 @@ const CatWrapper = Styled.div`
     }
 `;
 
-const Text = Styled.div`
+const Text = Styled.span`
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
 
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fcfcfc;
     text-decoration: none solid rgb(252, 252, 252);
     text-align: center;
