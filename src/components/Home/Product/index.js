@@ -10,9 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // components
 import H3 from '../../H3';
 
-export default ({src, data, display_store_name}) => {
+export default ({src, data, display_store_name, items_nb}) => {
+    let percentage = "21%";
+    if(items_nb === "5")
+        percentage = "18%";
+
     return (
-        <Flex percentage="20%" mobile="45%" align="flex-start" align_items="flex-start" direction="column">
+        <Flex percentage={percentage} mobile="45%" align="flex-start" align_items="flex-start" direction="column">
             {display_store_name &&
                 <H3>
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {data.author_store_name}
