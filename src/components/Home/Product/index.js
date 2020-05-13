@@ -9,11 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // components
 import H3 from '../../H3';
+import H4 from '../../H4';
 
 export default ({src, data, display_store_name, items_nb}) => {
     let percentage = "21%";
     if(items_nb === "5")
         percentage = "18%";
+
+    let multi_infos = true;
+    if(data.type && data.type !== "0")
+        multi_infos = false;
 
     return (
         <Flex percentage={percentage} mobile="45%" align="flex-start" align_items="flex-start" direction="column">
@@ -23,18 +28,18 @@ export default ({src, data, display_store_name, items_nb}) => {
                 </H3>       
             }
             <Image src={src} />
-            <Table className="tableprod">
-                <tbody>
-                    <tr>
-                        <Td>{data.price} CHF</Td>
-                        <Td className="text-right">Porté {data.wear}x</Td>
-                    </tr>
-                    <tr>
-                        <Td>{data.size}</Td>
-                        <Td className="text-right">{data.store}</Td>
-                    </tr>
-                </tbody>
-            </Table>
+            <FlexPrice percentage="100%" align="center">
+                <H4>{data.price} CHF</H4>
+            </FlexPrice>
+            <Flex percentage="100%" align={multi_infos ? 'space-between' : 'center'}>
+                {multi_infos ?
+                    <>
+                        <H4>{data.size}</H4>
+                        <H4>{data.store}</H4>
+                    </>
+                : <H4>{data.product}</H4>
+                }
+            </Flex>
         </Flex>
     )
 };
@@ -43,17 +48,6 @@ const Image = Styled.img`
     width:100%;
 `;
 
-const Table = Styled.table`
-    width: 100%;
-    font-size:1rem;
-    font-weight:lighter;
-    margin-top:1em;
-    
-    @media (max-width: 768px) {
-        margin-top:0em;
-    }
-`;
-
-const Td = Styled.td`
-    border: 1px solid black;    
+const FlexPrice = Styled(Flex)`
+    border-bottom:0.1px solid #bbb;
 `;
