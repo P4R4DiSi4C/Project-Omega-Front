@@ -46,6 +46,9 @@ export default ({src, data, display_store_name, items_nb}) => {
 
 const Image = Styled.img`
     width:100%;
+    height:100%;
+    object-fit: cover;
+    font-family: "object-fit: cover";
 `;
 
 const FlexPrice = Styled(Flex)`
