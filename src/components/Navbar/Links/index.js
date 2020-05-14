@@ -10,22 +10,22 @@ import VDivider from '../../VerticalDivider';
 export default ({is_extended}) => {
     return (
         <>
-            <FlexLinksDesktop percentage="50%" mobile="100%" align="center" mobile_align="center">
+            <FlexLinks className="hide_mobile" percentage="50%" mobile="100%" align="center" mobile_align="center">
                 <ActiveLink href="/" exact>Home</ActiveLink>
                 <VDivider />
                 <ActiveLink href="/about" exact>Home</ActiveLink>
                 <VDivider />
                 <ActiveLink href="/about" exact>Home</ActiveLink>
-            </FlexLinksDesktop>
+            </FlexLinks>
 
             {is_extended &&
-                <FlexLinksMobile percentage="50%" mobile="100%" align="center" mobile_align="center">
+                <FlexLinks className="hide_desktop" percentage="50%" mobile="100%" align="center" mobile_align="center">
                     <ActiveLink href="/" exact>Home</ActiveLink>
                     <VDivider />
                     <ActiveLink href="/about" exact>Home</ActiveLink>
                     <VDivider />
                     <ActiveLink href="/about" exact>Home</ActiveLink>
-                </FlexLinksMobile>
+                </FlexLinks>
             }
         </>
     )
@@ -44,17 +44,5 @@ const FlexLinks = Styled(Flex)`
     @media (max-width: 768px) {
         order:3;
         flex-direction:column;
-    }
-`;
-
-const FlexLinksDesktop = Styled(FlexLinks)`
-    @media (max-width: 768px) {
-        display:none;
-    }
-`;
-
-const FlexLinksMobile = Styled(FlexLinks)`
-    @media (min-width: 768px) {
-        display:none;
     }
 `;

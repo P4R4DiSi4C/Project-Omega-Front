@@ -27,7 +27,9 @@ export default ({src, data, display_store_name, items_nb}) => {
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {data.author_store_name}
                 </H3>       
             }
-            <Image src={src} />
+            <FlexImg percentage="100%">
+                <Image src={src} />
+            </FlexImg>
             <FlexPrice percentage="100%" align="center">
                 <H4>{data.price} CHF</H4>
             </FlexPrice>
@@ -46,9 +48,16 @@ export default ({src, data, display_store_name, items_nb}) => {
 
 const Image = Styled.img`
     width:100%;
-    height:100%;
+    min-height: 100%;
+    max-height: 100%;
     object-fit: cover;
-    font-family: "object-fit: cover";
+`;
+
+const FlexImg = Styled(Flex)`
+    height: 27vw;
+    @media (max-width: 768px) {
+        height: 58vw;
+    }
 `;
 
 const FlexPrice = Styled(Flex)`

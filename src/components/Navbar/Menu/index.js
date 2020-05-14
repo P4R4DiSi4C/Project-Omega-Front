@@ -13,14 +13,14 @@ import Flex from '../../Flex';
 export default ({is_extended, toggle}) => {
     return (
         <>
-            <FlexBtnDesktop percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+            <FlexBtn className="hide_mobile" percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
                     <Button color="teal">Connexion</Button>
-            </FlexBtnDesktop>
+            </FlexBtn>
 
             {is_extended &&
-                <FlexBtnMobile percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+                <FlexBtn className="hide_desktop" percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
                     <Button color="teal">Connexion</Button>
-                </FlexBtnMobile>
+                </FlexBtn>
             }
 
             <FlexHamburger percentage="20%" align="flex-end">
@@ -35,18 +35,6 @@ const FlexBtn = Styled(Flex)`
 
     @media (max-width: 768px) {
         order:1;
-    }
-`;
-
-const FlexBtnDesktop = Styled(FlexBtn)`
-    @media (max-width: 768px) {
-        display:none;
-    }
-`;
-
-const FlexBtnMobile = Styled(FlexBtn)`
-    @media (min-width: 768px) {
-        display:none;
     }
 `;
 
