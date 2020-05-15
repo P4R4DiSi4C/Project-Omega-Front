@@ -1,43 +1,48 @@
 import React from 'react';
 
-// libs
-import Styled from 'styled-components';
-import { navigate } from 'hookrouter';
-
-// icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 // components
-import Flex from '../../Flex';
-import Product from '../Product';
-import H2 from '../../H2';
-import Button from '../../Button';
+import Store from '../../StoreComponent';
 
 export default () => {
+    const data={
+        store_name:"Alice's Clothes",
+        products:{
+            0:{
+                title_item:"Robe Rose",
+                price:10,
+                size:"S/28",
+                store:"Zara",
+                type:0,
+                img:"/img/product1.jpg"
+            },
+            1:{
+                title_item:"Robe Bleue",
+                price:10,
+                size:"S/28",
+                store:"Zara",
+                type:0,
+                img:"/img/product2.jpg"
+            },
+            2:{
+                title_item:"Robe Bleue",
+                price:10,
+                size:"S/28",
+                store:"Zara",
+                type:0,
+                img:"/img/test2.jpeg"
+            },
+            3:{
+                title_item:"Robe Bleue",
+                price:10,
+                size:"S/28",
+                store:"Zara",
+                type:0,
+                img:"/img/test.jpeg"
+            }
+        }
+    };
+
     return (
-        <>
-            <Flex percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
-                <H2>
-                    <FontAwesomeIcon icon="store" color="#f7cc2f"/> MAGASIN VEDETTE
-                </H2>
-                <ButtonSponso onClick={() => navigate("/store/1")} color="#f7cc2f">
-                    ALICE'S CLOTHES <FontAwesomeIcon icon="chevron-right" />
-                </ButtonSponso>
-            </Flex>
-            <FlexProd percentage="100%" align="space-between" wrap="wrap">
-                <Product src="/img/product1.jpg" data={{author_store_name:"Alice's Clothes",price:10,size:"S/28",store:"Zara"}}/>
-                <Product src="/img/product2.jpg" data={{author_store_name:"Alice's Clothes",price:15,size:"M/32",store:"Zara"}}/>
-                <Product src="/img/test2.jpeg" data={{author_store_name:"Alice's Clothes",price:20,size:"L/36",store:"Zara"}}/>
-                <Product src="/img/test.jpeg" data={{author_store_name:"Alice's Clothes",price:20,size:"3XL/36",store:"Zara"}}/>
-            </FlexProd>
-        </>
+        <Store data={data} theme={0} products_per_row={4} />
     )
 };
-
-const FlexProd = Styled(Flex)`
-    margin-top:1em;
-`;
-
-const ButtonSponso = Styled(Button)`
-    font-size: 1.4rem;
-`;
