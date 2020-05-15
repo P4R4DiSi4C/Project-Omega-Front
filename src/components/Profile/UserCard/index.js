@@ -16,7 +16,9 @@ import Button from '../../Button';
 export default ({profile_pic,username,stars}) => {
     return (
         <>
-            <Image src={profile_pic} />
+            <FlexImg percentage="90%" mobile="70%">
+                <Image src={profile_pic} />
+            </FlexImg>
             <FlexButtons percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
                 <ButtonProfile color="#f7cc2f">
                     <span className="hide_mobile">SUIVRE</span>
@@ -40,10 +42,16 @@ export default ({profile_pic,username,stars}) => {
 };
 
 const Image = Styled.img`
-    width:90%;
+    width:100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+`;
 
+const FlexImg = Styled(Flex)`
+    height: 20vw;
     @media (max-width: 768px) {
-        width:55%;
+        height: 60vw;
     }
 `;
 
