@@ -16,7 +16,8 @@ export default () => {
                         size:"S/28",
                         store:"Zara",
                         type:0,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:0
                     },
                     1:{
                         title_item:"Robe Bleue",
@@ -24,7 +25,8 @@ export default () => {
                         size:"S/28",
                         store:"Zara",
                         type:0,
-                        img:"/img/product2.jpg"
+                        img:"/img/product2.jpg",
+                        id:1
                     },
                     2:{
                         title_item:"Robe Bleue",
@@ -32,7 +34,8 @@ export default () => {
                         size:"S/28",
                         store:"Zara",
                         type:0,
-                        img:"/img/test2.jpeg"
+                        img:"/img/test2.jpeg",
+                        id:2
                     },
                     3:{
                         title_item:"Robe Bleue",
@@ -40,7 +43,8 @@ export default () => {
                         size:"S/28",
                         store:"Zara",
                         type:0,
-                        img:"/img/test.jpeg"
+                        img:"/img/test.jpeg",
+                        id:3
                     },
                     4:{
                         title_item:"Robe Bleue",
@@ -48,7 +52,8 @@ export default () => {
                         size:"S/28",
                         store:"Zara",
                         type:0,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:4
                     }
                 }
             },
@@ -59,31 +64,36 @@ export default () => {
                         title_item:"PS4",
                         price:10,
                         type:1,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:5
                     },
                     1:{
                         title_item:"PS4",
                         price:10,
                         type:1,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:6
                     },
                     2:{
                         title_item:"PS4",
                         price:10,
                         type:1,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:7
                     },
                     3:{
                         title_item:"PS4",
                         price:10,
                         type:1,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:8
                     },
                     4:{
                         title_item:"PS4",
                         price:10,
                         type:1,
-                        img:"/img/product1.jpg"
+                        img:"/img/product1.jpg",
+                        id:9
                     }
                 }
             }

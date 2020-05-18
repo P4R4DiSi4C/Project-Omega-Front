@@ -13,7 +13,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product3.jpg"
+                img:"/img/product3.jpg",
+                id:10
             },
             1:{
                 store_name:"Cé",
@@ -22,7 +23,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product5.jpg"
+                img:"/img/product5.jpg",
+                id:11
             },
             2:{
                 store_name:"Jul",
@@ -31,7 +33,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product6.jpg"
+                img:"/img/product6.jpg",
+                id:12
             },
             3:{
                 store_name:"Oklm",
@@ -40,7 +43,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product1.jpg"
+                img:"/img/product1.jpg",
+                id:13
             }
         }
     };

@@ -15,5 +15,5 @@ const BrandFlex = Styled(Flex)`
 `;
 
 const Image = Styled.img`
-    width:20%;
+    width:70%;
 `;

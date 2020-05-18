@@ -3,6 +3,7 @@ import React from 'react';
 // libs
 import Styled from 'styled-components';
 import Flex from '../Flex';
+import {navigate} from 'hookrouter';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,9 +20,8 @@ export default ({product_data, display_store_name, products_per_row}) => {
     let multi_infos = true;
     if(product_data.type && product_data.type !== "0")
         multi_infos = false;
-
     return (
-        <Flex percentage={percentage} mobile="45%" align="flex-start" align_items="flex-start" direction="column">
+        <FlexProduct onClick={() => navigate("/product/" + product_data.id)} percentage={percentage} mobile="45%" align="flex-start" align_items="flex-start" direction="column">
             {display_store_name === true &&
                 <H3>
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {product_data.store_name}
@@ -42,9 +42,15 @@ export default ({product_data, display_store_name, products_per_row}) => {
                 : <H4>{product_data.title_item}</H4>
                 }
             </Flex>
-        </Flex>
+        </FlexProduct>
     )
 };
+
+const FlexProduct = Styled(Flex)`
+    &:hover{
+        cursor:pointer;
+    }
+`;
 
 const Image = Styled.img`
     width:100%;

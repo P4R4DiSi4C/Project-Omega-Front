@@ -5,6 +5,7 @@ import Styled from 'styled-components';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { navigate } from 'hookrouter';
 
 // components
 import Flex from '../../Flex';
@@ -13,9 +14,9 @@ import Stars from './stars';
 import Button from '../../Button';
 
 
-export default ({profile_pic,username,stars}) => {
+export default ({profile_pic,username,stars,theme}) => {
     return (
-        <>
+        <Card onClick={() => navigate("/profile/1")}>
             <FlexImg percentage="90%" mobile="70%">
                 <Image src={profile_pic} />
             </FlexImg>
@@ -33,13 +34,24 @@ export default ({profile_pic,username,stars}) => {
                     <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
                 </ContactBtn>
             </FlexButtons>
-            <H1>
-                {username}
-            </H1>
-            <Stars stars_nb={stars}/>
-        </>
+            <Feedback>
+                <H1>
+                    {username}
+                </H1>
+                <Stars stars_nb={stars}/>
+            </Feedback>
+        </Card>
     )
 };
+
+const Card = Styled.div`
+    &:hover{
+    cursor:pointer;
+    }
+`;
+
+const Feedback = Styled.div`
+`;
 
 const Image = Styled.img`
     width:100%;
@@ -50,6 +62,7 @@ const Image = Styled.img`
 
 const FlexImg = Styled(Flex)`
     height: 20vw;
+    
     @media (max-width: 768px) {
         height: 60vw;
     }

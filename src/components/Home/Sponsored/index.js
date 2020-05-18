@@ -13,7 +13,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product1.jpg"
+                img:"/img/product1.jpg",
+                id:14
             },
             1:{
                 title_item:"Robe Bleue",
@@ -21,7 +22,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/product2.jpg"
+                img:"/img/product2.jpg",
+                id:15
             },
             2:{
                 title_item:"Robe Bleue",
@@ -29,7 +31,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/test2.jpeg"
+                img:"/img/test2.jpeg",
+                id:16
             },
             3:{
                 title_item:"Robe Bleue",
@@ -37,7 +40,8 @@ export default () => {
                 size:"S/28",
                 store:"Zara",
                 type:0,
-                img:"/img/test.jpeg"
+                img:"/img/test.jpeg",
+                id:17
             }
         }
     };

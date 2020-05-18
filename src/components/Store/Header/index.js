@@ -2,6 +2,7 @@ import React from 'react';
 
 // libs
 import Styled from 'styled-components';
+import {navigate} from 'hookrouter';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +21,7 @@ export default ({store_name}) => {
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {store_name}
                 </H1>
             </Flex>
-            <Flex percentage="100%" align="space-between" align_items="space-between" mobile_align="center" wrap="wrap">
+            <Flex percentage="100%" align="space-between" align_items="space-between" mobile_align="center" wrap="wrap" onClick={() => navigate("/profile/1")}>
                 <Flex percentage="25%" mobile="100%" align="flex-start" direction="column">
                     <UserCard profile_pic="/img/profile.jpg" username="AliceMerveille" stars="4" />
                 </Flex>
