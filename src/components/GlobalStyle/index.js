@@ -17,4 +17,19 @@ export default createGlobalStyle`
             display:none!important;
         }
     }
+
+    
+
+    .slick-prev{
+        left:0!important;
+        z-index:1;
+    }
+
+    .slick-next{
+        right:0;
+    }
+
+    #SRLLightbox{
+        z-index:1;
+    }
 `;

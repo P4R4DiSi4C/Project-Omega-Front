@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 import SimpleReactLightbox from "simple-react-lightbox";
 
-
 // components
 import App from './views/App';
 
@@ -13,6 +12,7 @@ import 'sanitize.css';
 import 'sanitize.css/forms.css';
 import 'sanitize.css/typography.css';
 import './fontawesome.js';
+
 
 // theme
 const theme = {

@@ -9,6 +9,7 @@ export default Styled.button`
     font-weight: lighter;
     padding: 0.1rem 0.4rem;
     transition: 0.7s;
+    outline:none;
     text-decoration: none;
 
     &:hover, &:focus{

@@ -23,7 +23,7 @@ export default ({store_name}) => {
             </Flex>
             <Flex percentage="100%" align="space-between" align_items="space-between" mobile_align="center" wrap="wrap" onClick={() => navigate("/profile/1")}>
                 <Flex percentage="25%" mobile="100%" align="flex-start" direction="column">
-                    <UserCard profile_pic="/img/profile.jpg" username="AliceMerveille" stars="4" />
+                    <UserCard onClick={() => navigate("/profile/1")} profile_pic="/img/profile.jpg" username="AliceMerveille" stars="4" />
                 </Flex>
 
                 <FlexDesc percentage="72.5%" mobile="100%" align="space-between" align_items="flex-start" mobile_items="center" direction="column">
