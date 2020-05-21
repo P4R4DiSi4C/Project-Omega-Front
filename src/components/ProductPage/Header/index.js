@@ -246,7 +246,7 @@ const ProfileImg = Styled.div`
 const ProductBox = Styled(Flex)`
     background-color:#d6d6d68c;
     border-radius:3%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 `;
 
 
