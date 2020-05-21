@@ -77,10 +77,7 @@ export default ({store_name}) => {
 
     // Callback(s) to be passed to the SRLWrapper
     const callbacks = {
-        onSlideChange: slide => syncSlide(slide.index),
-        onLightboxOpened: slide => console.log(slide),
-        onLightboxClosed: current => console.log(current),
-        onCountSlides: total => console.log(total)
+        onSlideChange: slide => syncSlide(slide.index)
     };
 
     
