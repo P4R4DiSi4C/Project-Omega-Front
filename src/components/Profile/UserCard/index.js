@@ -33,21 +33,13 @@ export default ({profile_pic,username,stars,theme}) => {
                     <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
                 </ContactBtn>
             </FlexButtons>
-            <Feedback>
-                <H1>
-                    {username}
-                </H1>
-                <Stars stars_nb={stars}/>
-            </Feedback>
+            <H1>
+                {username}
+            </H1>
+            <Stars stars_nb={stars}/>
         </>
     )
 };
-
-const Feedback = Styled.div`
-    &:hover{
-        cursor:pointer;
-    }
-`;
 
 const Image = Styled.img`
     width:100%;

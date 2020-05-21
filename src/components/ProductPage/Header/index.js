@@ -15,6 +15,8 @@ import { SRLWrapper } from "simple-react-lightbox";
 // components
 import Flex from '../../Flex';
 import H2 from '../../H2';
+import H3 from '../../H3';
+import H4 from '../../H4';
 import Stars from '../../Profile/UserCard/stars';
 
 // configs
@@ -66,6 +68,18 @@ const slickSettings = {
     }]
 };
 
+const options = {
+    settings: {
+        disablePanzoom: true,
+        disableWheelControls: true,
+        autoplaySpeed:0
+    },
+    buttons: {
+        showDownloadButton:false,
+        showThumbnailsButton:false
+    }
+  };
+
 
 export default ({store_name}) => {
     const sliderRef = useRef();
@@ -83,24 +97,59 @@ export default ({store_name}) => {
     
     return (
         <>
-            <Flex percentage="100%" align="flex-start" align_items="flex-start" mobile_align="center" wrap="wrap">
-                <FlexCard percentage="20%" mobile="100%" align="flex-start" direction="column" onClick={() => navigate("/profile/1")}>
-                    <ProfileImg percentage="70%" mobile="70%">
-                        <Image src="/img/profile.jpg" />
-                    </ProfileImg>
-                    <Feedback>
+            <Flex percentage="100%" align_items="flex-start" mobile_align="center" wrap="wrap">
+                <FlexCard percentage="25%" mobile="100%" mobile_align="space-between" mobile_items="flex-start" wrap="wrap" onClick={() => navigate("/profile/1")}>
+                    <UserBox percentage="80%" mobile="40%" direction="column">
+                        <ProfileImg>
+                            <Image src="/img/profile.jpg" />
+                        </ProfileImg>
                         <H2>
                             AliceMerveille
                         </H2>
                         <Stars stars_nb={4} />
-                    </Feedback>
+                    </UserBox>
+                    <ProductBox percentage="90%" mobile="50%" direction="column">
+                        <H2>250 CHF</H2>
+                        <Divider />
+                        <Item>
+                            <Spec>
+                                <H4>TAILLE</H4>
+                                <H4>S/52</H4>
+                            </Spec>
+                            <Spec>
+                                <H4>MARQUE</H4>
+                                <H4>Zara</H4>
+                            </Spec>
+                            <Spec>
+                                <H4>ÉTAT</H4>
+                                <H4>Très bon</H4>
+                            </Spec>
+                            <Spec>
+                                <H4>VILLE</H4>
+                                <H4>Lausanne</H4>
+                            </Spec>
+                            <Spec>
+                                <H4>PAIEMENT</H4>
+                                <H4>Twint</H4>
+                            </Spec>
+                            <Spec>
+                                <H4>Vues</H4>
+                                <H4>24</H4>
+                            </Spec>
+                        </Item>
+                        <Divider />
+                        <H3>Veston</H3>
+                        <Item>
+                            <Desc>
+                                Veston en soie, acheté chez Zara et porté 5x.
+                            </Desc>
+                        </Item>
+                    </ProductBox>
                 </FlexCard>
-
-                <FlexImgViewer percentage="80%" mobile="100%" align="space-between" align_items="flex-start" mobile_items="center" direction="column">
+            
+                <FlexImgViewer percentage="75%" mobile="100%" align="space-between" align_items="flex-start" mobile_items="center" direction="column">
                     <Container>
-                    <SRLWrapper callbacks={callbacks}>
-                        <Row>
-                            <Col>
+                        <SRLWrapper options={options} callbacks={callbacks}>
                                 <Slider ref={sliderRef} {...slickSettings}>
                                     <ProductImg>
                                     <Image
@@ -143,15 +192,74 @@ export default ({store_name}) => {
                                     />
                                     </ProductImg>
                                 </Slider>
-                            </Col>
-                        </Row>
-                    </SRLWrapper>
+                        </SRLWrapper>
                     </Container>
                 </FlexImgViewer>           
             </Flex>
         </>
     )
 };
+
+const Desc = Styled.p`
+    margin:0;
+    font-weight:lighter;
+    text-align:center;
+    font-size:1.1rem;
+`;
+
+const Item = Styled.div`
+    width:90%;
+`;
+const Spec = Styled.div`
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+`;
+
+const Divider = Styled.hr`
+    width: 90%;
+    border: 0.1rem solid white;
+    margin:0;
+`;
+
+const FlexCard = Styled(Flex)`
+    border-right: 0.1px solid #bbb;
+    
+    @media (max-width: 768px){
+        margin-bottom:10%;
+        border:none;
+    }
+`;
+
+const UserBox = Styled(Flex)`
+
+`;
+
+const ProfileImg = Styled.div`
+    height: 12vw;
+
+    @media (max-width: 768px) {
+        height: 40vw;
+    }
+`;
+
+const ProductBox = Styled(Flex)`
+    background-color:#d6d6d68c;
+    border-radius:3%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+`;
+
+
+const Image = Styled.img`
+    width:100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+`;
+
+const FlexImgViewer = Styled(Flex)`
+    padding-left: 2.5%;
+`;
 
 const SlideBtn = Styled.button`
     position:absolute;
@@ -176,55 +284,7 @@ const ProductImg = Styled.div`
     }
 `;
 
-const Col = Styled.div`
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-`;
-
-const Row = Styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-`;
-
 const Container = Styled.div`
     width:100%;
     height:100%;
-`;
-
-
-
-
-
-const FlexCard = Styled(Flex)`
-    &:hover{
-        cursor:pointer;
-    }
-`;
-
-const Feedback = Styled.div``;
-
-const FlexImgViewer = Styled(Flex)`
-    padding-left: 2.5%;
-    border-left: 0.1px solid #bbb;
-`;
-
-const Image = Styled.img`
-    width:100%;
-    min-height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-`;
-
-const ProfileImg = Styled(Flex)`
-    height: 12vw;
-
-    @media (max-width: 768px) {
-        height: 60vw;
-    }
 `;

@@ -1,7 +1,5 @@
 import React from 'react';
 
-// libs
-import Flex from '../../Flex';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,10 +17,10 @@ export default ({stars_nb}) => {
     }
 
     return (
-        <Flex percentage="100%" align="center">
+        <div>
             {stars_to_display}
             {missing_stars}
-        </Flex>
+        </div>
     )
 };
 

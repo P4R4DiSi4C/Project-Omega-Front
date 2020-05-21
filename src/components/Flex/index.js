@@ -5,7 +5,7 @@ export default Styled.div`
     display:flex;
     align-items:${props => props.align_items ? props.align_items : "center"};
     width:${props => props.percentage};
-    justify-content:${props => props.align};
+    justify-content:${props => props.align ? props.align : "center"};
     flex-direction:${props => props.direction ? props.direction : "row"};
     flex-wrap:${props => props.wrap ? props.wrap :"nowrap"};
 
