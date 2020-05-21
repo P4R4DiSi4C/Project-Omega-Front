@@ -5,29 +5,26 @@ name: Production Build
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  pull_request:
   push:
     branches:
       - master
 jobs:
   build:
     runs-on: ubuntu-latest
+  
+  steps:
     
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+      
+    - name: Use Node.js 12.16.2
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12.16.2
+      
     - name: Npm Install
-          run:|
-            npm install
+        run:npm install
     - name: Production Build
-          run:|
-            npm build
+        run:npm build
     - name: S3 Sync
       uses: jakejarvis/s3-sync-action@master
       with:
