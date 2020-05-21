@@ -17,8 +17,7 @@
     "sanitize.css": "11.0.1",
     "simple-react-lightbox": "^3.0.2",
     "slick-carousel": "^1.8.1",
-    "styled-components": "5.1.0",
-    "swiper": "^5.4.1"
+    "styled-components": "5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
