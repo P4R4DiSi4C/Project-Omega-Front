@@ -18,7 +18,7 @@ const CatWrapper = Styled.div`
     position: relative;
     width:30%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         width:45%;
     }
 `;
@@ -35,7 +35,7 @@ const Text = Styled.span`
     text-decoration: none solid rgb(252, 252, 252);
     text-align: center;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         font-size: 1.2rem;
     }
 `;

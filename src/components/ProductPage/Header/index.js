@@ -13,10 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SRLWrapper } from "simple-react-lightbox";
 
 // components
-import Flex from '../../Flex';
-import H2 from '../../H2';
+import Flex from '../../Flex/test';
 import H3 from '../../H3';
-import H4 from '../../H4';
 import Stars from '../../Profile/UserCard/stars';
 
 // configs
@@ -57,15 +55,7 @@ const slickSettings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    responsive: 
-    [{   
-        breakpoint: 767,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        }
-    }]
+    nextArrow: <NextArrow />
 };
 
 const options = {
@@ -97,18 +87,31 @@ export default ({store_name}) => {
     
     return (
         <>
-            <Flex percentage="100%" align_items="flex-start" mobile_align="center" wrap="wrap">
-                <FlexCard percentage="25%" mobile="100%" mobile_align="space-between" mobile_items="flex-start" wrap="wrap" onClick={() => navigate("/profile/1")}>
-                    <UserBox percentage="80%" mobile="40%" direction="column">
-                        <ProfileImg>
-                            <Image src="/img/profile.jpg" />
-                        </ProfileImg>
-                        <H2>
+            <Flex 
+                w="100%" 
+                a_items="flex-start" 
+                j_content_mobile="center" 
+                wrap>
+                <FlexCard 
+                    w="25%" 
+                    w_mobile="100%"
+                    j_content_mobile="space-between"
+                    wrap="wrap" 
+                    onClick={() => navigate("/profile/1")}>
+                    <UserBox 
+                        w="80%" 
+                        w_mobile="40%" 
+                        d="column">
+                        <ProfileImg src="/img/profile.jpg" />
+                        <Username>
                             AliceMerveille
-                        </H2>
+                        </Username>
                         <Stars stars_nb={4} />
                     </UserBox>
-                    <ProductBox percentage="90%" mobile="50%" direction="column">
+                    <ProductBox 
+                        w="90%" 
+                        w_mobile="50%" 
+                        d="column">
                         <H3>250 CHF</H3>
                         <Divider />
                         <Item>
@@ -147,7 +150,14 @@ export default ({store_name}) => {
                     </ProductBox>
                 </FlexCard>
             
-                <FlexImgViewer percentage="75%" mobile="100%" align="space-between" align_items="flex-start" mobile_align="center" mobile_items="center" direction="column">
+                <FlexImgViewer 
+                    w="75%" 
+                    w_mobile="100%"
+                    j_content="space-between" 
+                    a_items="flex-start" 
+                    j_content_mobile="center" 
+                    a_items_mobile="center" 
+                    d="column">
                     <Container>
                         <SRLWrapper options={options} callbacks={callbacks}>
                                 <Slider ref={sliderRef} {...slickSettings}>
@@ -200,11 +210,15 @@ export default ({store_name}) => {
     )
 };
 
+const Username = Styled.span`
+    font-weight:lighter;
+`;
+
 const Desc = Styled.p`
     margin:0;
     font-weight:lighter;
     text-align:center;
-    font-size:1em;
+    font-size:1rem;
 `;
 
 const Item = Styled.div`
@@ -231,28 +245,31 @@ const FlexCard = Styled(Flex)`
     background-color:rgba(241, 239, 239, 0.45);
     border-radius:1%;
 
-    @media (max-width: 700px){
-        margin-bottom:10%;
+    @media (max-width: 767.98px){
+        margin-bottom:2rem;
         border-right:none;
     }
 `;
 
 const UserBox = Styled(Flex)`
-
-`;
-
-const ProfileImg = Styled.div`
-    height: 12vw;
-
-    @media (max-width: 700px) {
-        height: 40vw;
-    }
+    font-size:1.2rem;
 `;
 
 const ProductBox = Styled(Flex)`
     fonz-size:1rem;
 `;
 
+const ProfileImg = Styled.img`
+    width:80%;
+    height: 14vw;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    @media (max-width: 767.98px) {
+        height: 28vw;
+    }
+`;
 
 const Image = Styled.img`
     width:100%;
@@ -263,7 +280,7 @@ const Image = Styled.img`
 `;
 
 const FlexImgViewer = Styled(Flex)`
-    padding-left: 2.5%;
+
 `;
 
 const SlideBtn = Styled.button`
@@ -278,14 +295,15 @@ const SlideBtn = Styled.button`
     border:none;
     outline:none;
     cursor:pointer;
-    height:10%;
+    height:auto;
     border: 2px solid;
 `;
 
 const ProductImg = Styled.div`
-    height: 30vw;
-    @media (max-width: 700px) {
-        height: 100vw;
+    height: 35vw;
+
+    @media (max-width: 767.98px) {
+        height: 45vw;
     }
 `;
 

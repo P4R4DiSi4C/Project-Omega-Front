@@ -33,7 +33,7 @@ export default ({is_extended, toggle}) => {
 const FlexBtn = Styled(Flex)`
     order:2;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         order:1;
     }
 `;
@@ -42,7 +42,7 @@ const FlexHamburger = Styled(Flex)`
     display:none;
     text-align: right;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         display:block;
     }
 `;

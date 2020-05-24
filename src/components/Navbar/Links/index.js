@@ -41,7 +41,7 @@ const ActiveLink = Styled(Activelink)`
 const FlexLinks = Styled(Flex)`
     order:1;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         order:3;
         flex-direction:column;
     }

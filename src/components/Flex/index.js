@@ -9,7 +9,7 @@ export default Styled.div`
     flex-direction:${props => props.direction ? props.direction : "row"};
     flex-wrap:${props => props.wrap ? props.wrap :"nowrap"};
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         width:${props => props.mobile ? props.mobile : props.percentage};
         justify-content:${props => props.mobile_align ? props.mobile_align : props.align};
         align-items:${props => props.mobile_items ? props.mobile_items : props.align_items};

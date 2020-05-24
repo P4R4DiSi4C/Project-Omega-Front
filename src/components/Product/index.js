@@ -62,7 +62,7 @@ const Image = Styled.img`
 
 const FlexImg = Styled(Flex)`
     height: 27vw;
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         height: 58vw;
     }
 `;

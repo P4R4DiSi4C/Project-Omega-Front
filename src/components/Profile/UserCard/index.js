@@ -16,7 +16,7 @@ import Button from '../../Button';
 export default ({profile_pic,username,stars,theme}) => {
     return (
         <>
-            <FlexImg percentage="90%" mobile="35%">
+            <FlexImg percentage="90%" mobile="45%">
                 <Image src={profile_pic} />
             </FlexImg>
             <FlexButtons percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
@@ -35,8 +35,8 @@ export default ({profile_pic,username,stars,theme}) => {
             </FlexButtons>
             <H2>
                 {username}
+                <Stars stars_nb={stars}/>
             </H2>
-            <Stars stars_nb={stars}/>
         </>
     )
 };
@@ -54,8 +54,8 @@ const FlexImg = Styled(Flex)`
     &:hover{
         cursor:pointer;
     }
-    @media (max-width: 700px) {
-        height: 30vw;
+    @media (max-width: 767.98px) {
+        height: 40vw;
     }
 `;
 
@@ -68,7 +68,7 @@ const ButtonProfile = Styled(Button)`
     width:45%;
     padding:0.4rem;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         width:15%;
         margin:0px 8px;
     }
@@ -79,7 +79,7 @@ const ContactBtn = Styled(Button)`
     width:100%;
     padding:0.4rem;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         margin-top:0;
         width:15%;
         margin:0px 8px;

@@ -9,11 +9,11 @@ export default ({stars_nb}) => {
     const missing_stars = [];
 
     for (var i=0; i < stars_nb; i++) {
-        stars_to_display.push(<FontAwesomeIcon key={i} icon={['fa', 'star']} size="lg" color="#f7cc2f"/>);
+        stars_to_display.push(<FontAwesomeIcon key={i} icon={['fa', 'star']} color="#f7cc2f"/>);
     }
     
     for (i=0; i < 5-stars_nb; i++) {
-        missing_stars.push(<FontAwesomeIcon key={i} icon={['far', 'star']} size="lg" color="#f7cc2f"/>  );
+        missing_stars.push(<FontAwesomeIcon key={i} icon={['far', 'star']} color="#f7cc2f"/>  );
     }
 
     return (

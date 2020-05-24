@@ -53,7 +53,7 @@ const Item = Styled.div`
 `;
 
 const Location = Styled(Item)`
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         margin-top:2em;
     }
 `;
@@ -63,7 +63,7 @@ const Desc = Styled.p`
     font-size:1.2rem;
     text-align:justify;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767.98px) {
         font-size:1rem;
     }
 `;

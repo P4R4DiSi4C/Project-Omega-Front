@@ -6,24 +6,27 @@ export default createGlobalStyle`
         font-family: ${props => props.theme.textFont};
         font-size: 16px;
 
-        @media (max-width: 700px){
+        @media (max-width: 1199.98px) {
+            font-size: 15px;
+        }
+
+        @media (max-width: 767.98px) {
             font-size: 14px;
         }
+
     }
 
     .hide_mobile{
-        @media (max-width: 700px) {
+        @media (max-width: 767.98px) {
             display:none!important;
         }
     }
 
     .hide_desktop{
-        @media (min-width: 700px) {
+        @media (min-width: 767.98px) {
             display:none!important;
         }
     }
-
-    
 
     .slick-prev{
         left:0!important;
@@ -36,5 +39,9 @@ export default createGlobalStyle`
 
     #SRLLightbox{
         z-index:1;
+    }
+
+    .slick-list{
+        height:auto !important;
     }
 `;
