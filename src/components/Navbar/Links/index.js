@@ -10,7 +10,7 @@ import VDivider from '../../VerticalDivider';
 export default ({is_extended}) => {
     return (
         <>
-            <FlexLinks className="hide_mobile" percentage="50%" mobile="100%" align="center" mobile_align="center">
+            <FlexLinks className="hide_mobile" w="50%" w_mobile="100%" j_content="center" j_content_mobile="center">
                 <ActiveLink href="/" exact>Home</ActiveLink>
                 <VDivider />
                 <ActiveLink href="/about" exact>Home</ActiveLink>
@@ -19,7 +19,7 @@ export default ({is_extended}) => {
             </FlexLinks>
 
             {is_extended &&
-                <FlexLinks className="hide_desktop" percentage="50%" mobile="100%" align="center" mobile_align="center">
+                <FlexLinks className="hide_desktop" w="50%" w_mobile="100%" j_content="center" j_content_mobile="center">
                     <ActiveLink href="/" exact>Home</ActiveLink>
                     <VDivider />
                     <ActiveLink href="/about" exact>Home</ActiveLink>

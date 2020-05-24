@@ -13,17 +13,17 @@ import Flex from '../../Flex';
 export default ({is_extended, toggle}) => {
     return (
         <>
-            <FlexBtn className="hide_mobile" percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+            <FlexBtn className="hide_mobile" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
                     <Button color="teal">Connexion</Button>
             </FlexBtn>
 
             {is_extended &&
-                <FlexBtn className="hide_desktop" percentage="20%" mobile="100%" mobile_align="center" align="flex-end">
+                <FlexBtn className="hide_desktop" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
                     <Button color="teal">Connexion</Button>
                 </FlexBtn>
             }
 
-            <FlexHamburger percentage="20%" align="flex-end">
+            <FlexHamburger w="20%" j_content="flex-end">
                 <FontAwesomeIcon icon={is_extended ? "times" : "bars"} onClick={() => toggle()} />
             </FlexHamburger>
         </>

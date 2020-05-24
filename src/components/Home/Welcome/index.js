@@ -6,7 +6,7 @@ import Flex from '../../Flex';
 
 export default () => {
     return (
-        <Flex percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
+        <Flex w="100%" j_content="space-between" j_content_mobile="center" wrap>
             <Image src={"/img/welcome_img.jpg"} alt="Welcome Image" />
             <Title>
                 Faites du tri, gagnez de l'argent et trouvez ce qui vous plait !

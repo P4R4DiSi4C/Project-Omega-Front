@@ -15,12 +15,12 @@ import H4 from '../../H4';
 export default ({desc,location,show_verified}) => {
     return (
         <>
-            <Flex percentage="80%" mobile="100%">
+            <Flex w="80%" w_mobile="100%">
                 <Desc>{desc}</Desc>
             </Flex>
 
             {show_verified &&
-                <Flex percentage="80%" mobile="100%" align_items="flex-start" mobile_items="center" direction="column">
+                <Flex w="80%" w_mobile="100%" a_items="flex-start" a_items_mobile="center" d="column">
                     <H3>Information vérifiées</H3>
                     <div>
                         <Item>

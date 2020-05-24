@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SRLWrapper } from "simple-react-lightbox";
 
 // components
-import Flex from '../../Flex/test';
+import Flex from '../../Flex';
 import H3 from '../../H3';
 import Stars from '../../Profile/UserCard/stars';
 
@@ -96,7 +96,7 @@ export default ({store_name}) => {
                     w="25%" 
                     w_mobile="100%"
                     j_content_mobile="space-between"
-                    wrap="wrap" 
+                    wrap 
                     onClick={() => navigate("/profile/1")}>
                     <UserBox 
                         w="80%" 

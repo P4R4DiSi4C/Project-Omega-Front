@@ -11,7 +11,7 @@ import Flex from '../Flex';
 
 export default (props) => {
     return (
-        <Layout percentage="100%" align="center">
+        <Layout w="100%" j_content="center">
             <Content>
                 <Icon icon="search" />
                 <Bar placeholder={props.placeholder} />

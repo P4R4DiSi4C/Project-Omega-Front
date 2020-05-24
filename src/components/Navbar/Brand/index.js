@@ -5,7 +5,7 @@ import {navigate} from 'hookrouter';
 
 export default () => {
     return (
-        <BrandFlex percentage="20%" mobile="80%" align="flex-start">
+        <BrandFlex w="20%" w_mobile="80%" j_content="flex-start">
             <Image onClick={() => navigate("/")} src={"/img/logo.png"} alt="Company Logo" />
         </BrandFlex>
     )

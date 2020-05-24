@@ -13,27 +13,27 @@ import H3 from '../H3';
 import H4 from '../H4';
 
 export default ({product_data, display_store_name, products_per_row}) => {
-    let percentage = "21%";
+    let width = "21%";
     if(products_per_row === 5)
-        percentage = "18%";
+        width = "18%";
 
     let multi_infos = true;
     if(product_data.type && product_data.type !== "0")
         multi_infos = false;
     return (
-        <FlexProduct onClick={() => navigate("/product/" + product_data.id)} percentage={percentage} mobile="45%" align="flex-start" align_items="flex-start" direction="column">
+        <FlexProduct onClick={() => navigate("/product/" + product_data.id)} w={width} w_mobile="45%" j_content="flex-start" a_items="flex-start" d="column">
             {display_store_name === true &&
                 <H3>
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {product_data.store_name}
                 </H3>       
             }
-            <FlexImg percentage="100%">
+            <FlexImg w="100%">
                 <Image src={product_data.img} />
             </FlexImg>
-            <FlexPrice percentage="100%" align="center">
+            <FlexPrice w="100%" j_content="center">
                 <H4>{product_data.price} CHF</H4>
             </FlexPrice>
-            <Flex percentage="100%" align={multi_infos ? 'space-between' : 'center'}>
+            <Flex w="100%" j_content={multi_infos ? 'space-between' : 'center'}>
                 {multi_infos ?
                     <>
                         <H4>{product_data.size}</H4>

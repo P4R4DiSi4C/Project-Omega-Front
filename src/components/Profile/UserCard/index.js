@@ -16,10 +16,10 @@ import Button from '../../Button';
 export default ({profile_pic,username,stars,theme}) => {
     return (
         <>
-            <FlexImg percentage="90%" mobile="45%">
+            <FlexImg w="90%" w_mobile="45%">
                 <Image src={profile_pic} />
             </FlexImg>
-            <FlexButtons percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
+            <FlexButtons w="100%" j_content="space-between" j_content_mobile="center" wrap>
                 <ButtonProfile color="#f7cc2f">
                     <span className="hide_mobile">SUIVRE</span>
                     <FontAwesomeIcon className="hide_desktop" icon="user-plus" size="lg"/>

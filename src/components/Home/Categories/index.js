@@ -14,12 +14,12 @@ import Category from '../Category';
 export default () => {
     return (
         <>
-            <Flex percentage="100%" align="flex-start">
+            <Flex w="100%" j_content="flex-start">
                 <H2>
                     <FontAwesomeIcon icon="list" color="#f7cc2f"/> Catégories
                 </H2>
             </Flex>
-            <FlexCat percentage="100%" align="space-around" mobile_align="space-between" wrap="wrap">
+            <FlexCat w="100%" j_content="space-around" j_content_mobile="space-between" wrap>
                 <Category img_src={'/img/cat_shoes.jpg'} cat_title="CHAUSSURES" />
                 <Category img_src={'/img/cat_acce.jpg'} cat_title="ACCESSOIRES" />
             </FlexCat>
