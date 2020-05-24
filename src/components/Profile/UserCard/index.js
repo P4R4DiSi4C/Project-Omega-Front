@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // components
 import Flex from '../../Flex';
-import H1 from '../../H1';
+import H2 from '../../H2';
 import Stars from './stars';
 import Button from '../../Button';
 
@@ -16,7 +16,7 @@ import Button from '../../Button';
 export default ({profile_pic,username,stars,theme}) => {
     return (
         <>
-            <FlexImg percentage="90%" mobile="70%">
+            <FlexImg percentage="90%" mobile="35%">
                 <Image src={profile_pic} />
             </FlexImg>
             <FlexButtons percentage="100%" align="space-between" mobile_align="center" wrap="wrap">
@@ -33,9 +33,9 @@ export default ({profile_pic,username,stars,theme}) => {
                     <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
                 </ContactBtn>
             </FlexButtons>
-            <H1>
+            <H2>
                 {username}
-            </H1>
+            </H2>
             <Stars stars_nb={stars}/>
         </>
     )
@@ -46,6 +46,7 @@ const Image = Styled.img`
     min-height: 100%;
     max-height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 `;
 
 const FlexImg = Styled(Flex)`
@@ -53,8 +54,8 @@ const FlexImg = Styled(Flex)`
     &:hover{
         cursor:pointer;
     }
-    @media (max-width: 768px) {
-        height: 60vw;
+    @media (max-width: 700px) {
+        height: 30vw;
     }
 `;
 
@@ -67,7 +68,7 @@ const ButtonProfile = Styled(Button)`
     width:45%;
     padding:0.4rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         width:15%;
         margin:0px 8px;
     }
@@ -78,7 +79,7 @@ const ContactBtn = Styled(Button)`
     width:100%;
     padding:0.4rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         margin-top:0;
         width:15%;
         margin:0px 8px;

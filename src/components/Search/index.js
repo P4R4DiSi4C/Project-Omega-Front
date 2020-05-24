@@ -37,7 +37,7 @@ const Content = Styled.div`
     flex-direction: row;
     align-items: center;
     background-color: #f5f6f7;
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         width:100%;
     }
 `;

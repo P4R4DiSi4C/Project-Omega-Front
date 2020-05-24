@@ -60,7 +60,7 @@ const slickSettings = {
     nextArrow: <NextArrow />,
     responsive: 
     [{   
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -109,32 +109,32 @@ export default ({store_name}) => {
                         <Stars stars_nb={4} />
                     </UserBox>
                     <ProductBox percentage="90%" mobile="50%" direction="column">
-                        <H2>250 CHF</H2>
+                        <H3>250 CHF</H3>
                         <Divider />
                         <Item>
                             <Spec>
-                                <H4>TAILLE</H4>
-                                <H4>S/52</H4>
+                                <SpecItem>TAILLE</SpecItem>
+                                <SpecItem>S/52</SpecItem>
                             </Spec>
                             <Spec>
-                                <H4>MARQUE</H4>
-                                <H4>Zara</H4>
+                                <SpecItem>MARQUE</SpecItem>
+                                <SpecItem>Zara</SpecItem>
                             </Spec>
                             <Spec>
-                                <H4>ÉTAT</H4>
-                                <H4>Très bon</H4>
+                                <SpecItem>ÉTAT</SpecItem>
+                                <SpecItem>Très bon</SpecItem>
                             </Spec>
                             <Spec>
-                                <H4>VILLE</H4>
-                                <H4>Lausanne</H4>
+                                <SpecItem>VILLE</SpecItem>
+                                <SpecItem>Lausanne</SpecItem>
                             </Spec>
                             <Spec>
-                                <H4>PAIEMENT</H4>
-                                <H4>Twint</H4>
+                                <SpecItem>PAIEMENT</SpecItem>
+                                <SpecItem>Twint</SpecItem>
                             </Spec>
                             <Spec>
-                                <H4>Vues</H4>
-                                <H4>24</H4>
+                                <SpecItem>VUES</SpecItem>
+                                <SpecItem>24</SpecItem>
                             </Spec>
                         </Item>
                         <Divider />
@@ -147,7 +147,7 @@ export default ({store_name}) => {
                     </ProductBox>
                 </FlexCard>
             
-                <FlexImgViewer percentage="75%" mobile="100%" align="space-between" align_items="flex-start" mobile_items="center" direction="column">
+                <FlexImgViewer percentage="75%" mobile="100%" align="space-between" align_items="flex-start" mobile_align="center" mobile_items="center" direction="column">
                     <Container>
                         <SRLWrapper options={options} callbacks={callbacks}>
                                 <Slider ref={sliderRef} {...slickSettings}>
@@ -204,7 +204,7 @@ const Desc = Styled.p`
     margin:0;
     font-weight:lighter;
     text-align:center;
-    font-size:1.1rem;
+    font-size:1em;
 `;
 
 const Item = Styled.div`
@@ -216,6 +216,10 @@ const Spec = Styled.div`
     justify-content:space-between;
 `;
 
+const SpecItem = Styled.span`
+    font-weight:lighter;
+`;
+
 const Divider = Styled.hr`
     width: 90%;
     border: 0.1rem solid white;
@@ -224,10 +228,12 @@ const Divider = Styled.hr`
 
 const FlexCard = Styled(Flex)`
     border-right: 0.1px solid #bbb;
-    
-    @media (max-width: 768px){
+    background-color:rgba(241, 239, 239, 0.45);
+    border-radius:1%;
+
+    @media (max-width: 700px){
         margin-bottom:10%;
-        border:none;
+        border-right:none;
     }
 `;
 
@@ -238,15 +244,13 @@ const UserBox = Styled(Flex)`
 const ProfileImg = Styled.div`
     height: 12vw;
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         height: 40vw;
     }
 `;
 
 const ProductBox = Styled(Flex)`
-    background-color:#d6d6d68c;
-    border-radius:3%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    fonz-size:1rem;
 `;
 
 
@@ -255,6 +259,7 @@ const Image = Styled.img`
     min-height: 100%;
     max-height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 `;
 
 const FlexImgViewer = Styled(Flex)`
@@ -278,9 +283,9 @@ const SlideBtn = Styled.button`
 `;
 
 const ProductImg = Styled.div`
-    height: 35vw;
-    @media (max-width: 768px) {
-        height: 120vw;
+    height: 30vw;
+    @media (max-width: 700px) {
+        height: 100vw;
     }
 `;
 

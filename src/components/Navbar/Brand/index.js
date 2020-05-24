@@ -18,4 +18,8 @@ const BrandFlex = Styled(Flex)`
 const Image = Styled.img`
     width:70%;
     cursor:pointer;
+    
+    @media (max-width: 700px) {
+        width: 40%;
+    }
 `;

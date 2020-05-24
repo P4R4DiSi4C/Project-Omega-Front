@@ -18,20 +18,22 @@ export default () => {
 const Image = Styled.img`
     width:40%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         width:70%;
     }
 `;
 
 const Title = Styled.h1`
-    font-size:3.4rem;
+    font-size:3.4em;
     font-weight:lighter;
+    line-height:2em;
     width:50%;
     margin:0;
     
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         width:80%;
-        font-size:1.7rem;
+        font-size:2.3em;
+        line-height:1.5em;
         text-align:center;
     }
 `;

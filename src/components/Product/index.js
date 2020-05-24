@@ -57,11 +57,12 @@ const Image = Styled.img`
     min-height: 100%;
     max-height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 `;
 
 const FlexImg = Styled(Flex)`
     height: 27vw;
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         height: 58vw;
     }
 `;

@@ -4,16 +4,21 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
     html {
         font-family: ${props => props.theme.textFont};
+        font-size: 16px;
+
+        @media (max-width: 700px){
+            font-size: 14px;
+        }
     }
 
     .hide_mobile{
-        @media (max-width: 768px) {
+        @media (max-width: 700px) {
             display:none!important;
         }
     }
 
     .hide_desktop{
-        @media (min-width: 768px) {
+        @media (min-width: 700px) {
             display:none!important;
         }
     }

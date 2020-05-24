@@ -28,7 +28,7 @@ export default ({data, theme, products_per_row}) => {
                     </H2>
                 }
                 {(theme === 0 || theme === 2) &&
-                    <ButtonStore width={theme === 2 ? "30%" : "auto"} onClick={() => navigate("/store/1")} color="#f7cc2f">
+                    <ButtonStore width={theme === 2 ? "40%" : "auto"} onClick={() => navigate("/store/1")} color="#f7cc2f">
                         {theme === 2 && <FontAwesomeIcon icon="store" color="#f7cc2f"/>} {data.store_name} <FontAwesomeIcon icon="chevron-right" />
                     </ButtonStore>
                 }
@@ -55,7 +55,7 @@ const ButtonStore = Styled(Button)`
 
     width:${props => props.width ? props.width : "auto"};
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
         width:100%;
     }
 `;
