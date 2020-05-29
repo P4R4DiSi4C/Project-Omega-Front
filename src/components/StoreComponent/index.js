@@ -29,7 +29,7 @@ export default ({data, theme, products_per_row}) => {
                 }
                 {(theme === 0 || theme === 2) &&
                     <ButtonStore width={theme === 2 ? "40%" : "auto"} onClick={() => navigate("/store/1")} color="#f7cc2f">
-                        {theme === 2 && <FontAwesomeIcon icon="store" color="#f7cc2f"/>} {data.store_name} <FontAwesomeIcon icon="chevron-right" />
+                        {theme === 2 && <FontAwesomeIcon icon="store"/>} {data.store_name} <FontAwesomeIcon icon="chevron-right" />
                     </ButtonStore>
                 }
             </Flex>

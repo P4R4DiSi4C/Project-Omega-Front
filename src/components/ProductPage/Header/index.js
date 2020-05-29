@@ -16,6 +16,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 import Flex from '../../Flex';
 import H3 from '../../H3';
 import Stars from '../../Profile/UserCard/stars';
+import Button from '../../Button';
 
 // configs
 // Settings for Slick
@@ -71,7 +72,7 @@ const options = {
   };
 
 
-export default ({store_name}) => {
+export default ({data}) => {
     const sliderRef = useRef();
    
     // Function to Sync the slide with Slick (Must be an arrow function)
@@ -86,7 +87,6 @@ export default ({store_name}) => {
 
     
     return (
-        <>
             <Flex 
                 w="100%" 
                 a_items="flex-start" 
@@ -96,12 +96,12 @@ export default ({store_name}) => {
                     w="25%" 
                     w_mobile="100%"
                     j_content_mobile="space-between"
-                    wrap 
-                    onClick={() => navigate("/profile/1")}>
+                    wrap >
                     <UserBox 
                         w="80%" 
                         w_mobile="40%" 
-                        d="column">
+                        d="column"
+                        onClick={() => navigate("/profile/1")}>
                         <ProfileImg src="/img/profile.jpg" />
                         <Username>
                             AliceMerveille
@@ -147,6 +147,25 @@ export default ({store_name}) => {
                                 Veston en soie, acheté chez Zara et porté 5x.
                             </Desc>
                         </Item>
+                        <ButtonsBox 
+                        w="90%" 
+                        w_mobile="100%" 
+                        j_content="space-between" 
+                        j_content_mobile="center" 
+                        wrap>
+                            <ButtonProfile color="#f7cc2f">
+                                <span className="hide_mobile">ACHETER</span>
+                                <FontAwesomeIcon className="hide_desktop" icon="shopping-cart" size="lg"/>
+                            </ButtonProfile>
+                            <ButtonProfile color="#f7cc2f">
+                                <span className="hide_mobile">FAVORI</span>
+                                <FontAwesomeIcon className="hide_desktop" icon="bookmark" size="lg"/>
+                            </ButtonProfile>
+                            <ContactBtn color="#f7cc2f">
+                                <span className="hide_mobile">CONTACTER</span>
+                                <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
+                            </ContactBtn>
+                        </ButtonsBox>
                     </ProductBox>
                 </FlexCard>
             
@@ -206,9 +225,35 @@ export default ({store_name}) => {
                     </Container>
                 </FlexImgViewer>           
             </Flex>
-        </>
     )
 };
+
+const ButtonsBox = Styled(Flex)`
+    margin-top:1em;
+    margin-bottom:1em;
+`;
+
+const ButtonProfile = Styled(Button)`
+    width:45%;
+    padding:0.4rem;
+
+    @media (max-width: 767.98px) {
+        width:20%;
+        margin:0px 8px;
+    }
+`;
+
+const ContactBtn = Styled(Button)`
+    margin-top:1em;
+    width:100%;
+    padding:0.4rem;
+
+    @media (max-width: 767.98px) {
+        margin-top:0;
+        width:20%;
+        margin:0px 8px;
+    }
+`;
 
 const Username = Styled.span`
     font-weight:lighter;
@@ -260,13 +305,14 @@ const ProductBox = Styled(Flex)`
 `;
 
 const ProfileImg = Styled.img`
-    width:80%;
-    height: 14vw;
+    width:60%;
+    height: 10vw;
     min-height: 100%;
     max-height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
     @media (max-width: 767.98px) {
+        width:80%;
         height: 28vw;
     }
 `;
@@ -280,7 +326,9 @@ const Image = Styled.img`
 `;
 
 const FlexImgViewer = Styled(Flex)`
-
+    @media (max-width: 767.98px) {
+        margin-bottom:1em;
+    }
 `;
 
 const SlideBtn = Styled.button`

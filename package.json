@@ -15,7 +15,7 @@
     "react-scripts": "3.4.1",
     "react-slick": "^0.26.1",
     "sanitize.css": "11.0.1",
-    "simple-react-lightbox": "^3.0.2",
+    "simple-react-lightbox": "^3.0.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "5.1.0"
   },
