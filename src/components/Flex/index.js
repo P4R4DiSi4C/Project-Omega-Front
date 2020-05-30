@@ -7,7 +7,7 @@ export default Styled.div`
     width:${props => props.w};
     justify-content:${props => props.j_content ? props.j_content : "center"};
     flex-direction:${props => props.d ? props.d : "row"};
-    flex-wrap:${props => props.wrap ? "wrap" :"nowrap"};
+    flex-wrap:${props => props.f_wrap ? "wrap" :"nowrap"};
 
     // Smartphones
     @media (max-width: 767.98px) {

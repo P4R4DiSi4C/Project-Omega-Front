@@ -20,6 +20,6 @@ const Image = Styled.img`
     cursor:pointer;
     
     @media (max-width: 767.98px) {
-        width: 40%;
+        width: 50%;
     }
 `;

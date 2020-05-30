@@ -19,7 +19,7 @@ export default () => {
                     <FontAwesomeIcon icon="list" color="#f7cc2f"/> Catégories
                 </H2>
             </Flex>
-            <FlexCat w="100%" j_content="space-around" j_content_mobile="space-between" wrap>
+            <FlexCat w="100%" j_content="space-around" j_content_mobile="space-between" f_wrap>
                 <Category img_src={'/img/cat_shoes.jpg'} cat_title="CHAUSSURES" />
                 <Category img_src={'/img/cat_acce.jpg'} cat_title="ACCESSOIRES" />
             </FlexCat>

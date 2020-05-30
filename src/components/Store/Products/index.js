@@ -99,7 +99,7 @@ export default () => {
     };
 
     return (
-        <Flex w="100%" j_content="space-between" wrap>
+        <Flex w="100%" j_content="space-between" f_wrap>
             {Object.keys(products).map((keyName, i) => (
                 <Product key={i} products_per_row={5} product_data={products[keyName]} />
             ))}

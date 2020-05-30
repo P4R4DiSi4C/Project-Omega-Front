@@ -2,20 +2,18 @@
 import Styled from 'styled-components';
 
 export default Styled.button`
-    background: none;
-    border: 2px ${props => props.color} solid;
+    background: ${props => props.bg_color ? props.bg_color : "none"};
+    border: ${props => props.bg_color ? "none" : "2px solid " + props.color};
+    border-radius: 1.5rem;
     color: ${props => props.color};
     width: auto;
     font-weight: lighter;
-    padding: 0.1rem 0.4rem;
+    padding: 0.2rem 0.8rem;
     transition: 0.7s;
     outline:none;
     text-decoration: none;
 
     &:hover, &:focus{
-        color: #fff;
-        border-color: ${props => props.color};
-        box-shadow: inset 0 0 0 2em ${props => props.color};
         cursor:pointer;
     };
 `;

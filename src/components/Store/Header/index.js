@@ -21,7 +21,7 @@ export default ({store_name}) => {
                     <FontAwesomeIcon icon="store" color="#f7cc2f"/> {store_name}
                 </H1>
             </Flex>
-            <Flex w="100%" j_content="space-between" a_items="space-between" j_content_mobile="center" wrap onClick={() => navigate("/profile/1")}>
+            <Flex w="100%" j_content="space-between" a_items="space-between" j_content_mobile="center" f_wrap>
                 <Flex w="25%" w_mobile="100%" d="column">
                     <UserCard onClick={() => navigate("/profile/1")} profile_pic="/img/profile.jpg" username="AliceMerveille" stars="4" />
                 </Flex>

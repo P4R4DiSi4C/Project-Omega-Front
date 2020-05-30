@@ -91,12 +91,12 @@ export default ({data}) => {
                 w="100%" 
                 a_items="flex-start" 
                 j_content_mobile="center" 
-                wrap>
+                f_wrap>
                 <FlexCard 
                     w="25%" 
                     w_mobile="100%"
                     j_content_mobile="space-between"
-                    wrap >
+                    f_wrap >
                     <UserBox 
                         w="80%" 
                         w_mobile="40%" 
@@ -152,7 +152,7 @@ export default ({data}) => {
                         w_mobile="100%" 
                         j_content="space-between" 
                         j_content_mobile="center" 
-                        wrap>
+                        f_wrap>
                             <ButtonProfile color="#f7cc2f">
                                 <span className="hide_mobile">ACHETER</span>
                                 <FontAwesomeIcon className="hide_desktop" icon="shopping-cart" size="lg"/>
