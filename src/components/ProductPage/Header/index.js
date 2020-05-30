@@ -151,7 +151,7 @@ export default ({data}) => {
                         w="90%" 
                         w_mobile="100%" 
                         j_content="space-between" 
-                        j_content_mobile="center" 
+                        j_content_mobile="space-between" 
                         f_wrap>
                             <ButtonProfile color="#f7cc2f">
                                 <span className="hide_mobile">ACHETER</span>
@@ -238,8 +238,7 @@ const ButtonProfile = Styled(Button)`
     padding:0.4rem;
 
     @media (max-width: 767.98px) {
-        width:20%;
-        margin:0px 8px;
+        width:30%;
     }
 `;
 
@@ -249,9 +248,8 @@ const ContactBtn = Styled(Button)`
     padding:0.4rem;
 
     @media (max-width: 767.98px) {
-        margin-top:0;
-        width:20%;
-        margin:0px 8px;
+        margin-top:0em;
+        width:30%;
     }
 `;
 
