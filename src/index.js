@@ -16,7 +16,8 @@ import './fontawesome.js';
 
 // theme
 const theme = {
-    textFont: '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif'
+    textFont: '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+    main: '#f7cc2f'
   };
 
 ReactDOM.render(

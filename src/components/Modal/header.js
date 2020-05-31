@@ -16,6 +16,7 @@ export default (props) => {
 const Title = Styled.span`
     font-size: 1.6rem;
     font-weight: bold;
+    text-align: center;
 `;
 
 const SubTitle = Styled.p`

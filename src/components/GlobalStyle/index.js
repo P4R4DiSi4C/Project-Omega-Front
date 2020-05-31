@@ -13,7 +13,10 @@ export default createGlobalStyle`
         @media (max-width: 767.98px) {
             font-size: 14px;
         }
-
+        
+        @media (max-width: 325.00px) {
+            font-size: 12px;
+        }
     }
 
     .hide_mobile{

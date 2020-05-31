@@ -5,7 +5,7 @@ import Styled from 'styled-components';
 import {navigate} from 'hookrouter';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from '../../Icon';
 
 // components
 import Flex from '../../Flex';
@@ -18,7 +18,7 @@ export default ({store_name}) => {
         <>
             <Flex w="100%" j_content="flex-end" j_content_mobile="center">
                 <H1>
-                    <FontAwesomeIcon icon="store" color="#f7cc2f"/> {store_name}
+                    <Icon icon="store"/> {store_name}
                 </H1>
             </Flex>
             <Flex w="100%" j_content="space-between" a_items="space-between" j_content_mobile="center" f_wrap>

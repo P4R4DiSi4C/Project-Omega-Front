@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 // libs
 import Styled from 'styled-components';
 
 export default (props) => {
+
+    // Disable body scroll
+    useEffect(() => {
+        props.is_open && (document.body.style.overflow = 'hidden');
+        !props.is_open && (document.body.style.overflow = '');
+    }, [props.is_open]);
+
     return (
         <>
             { props.is_open &&
@@ -25,17 +32,21 @@ export default (props) => {
 const Modal = Styled.div`
     width: 95vw;
     max-width: 450px;
-    height: 70vh;
-    max-height: 700px;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
+    min-height: 65vh;
+    max-height: 95%;
+    overflow-y: scroll;
     border: 3px solid orange;
     background-color: #ffffff;
     display: flex;
     flex-direction: column; 
     align-items: center;
     padding: 2rem 2rem 2rem 2rem;
+
+    // Hide Scrollbar
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    -ms-overflow-style: none;
 `;
 
 const Backdrop = Styled.div`
@@ -46,7 +57,7 @@ const Backdrop = Styled.div`
     z-index: 2000;
     position: fixed;
     background-color: rgba(0,0,0,.7);
-    padding-top: 2%;
     align-items: center;
+    justify-content: center;
     display: flex;
 `;

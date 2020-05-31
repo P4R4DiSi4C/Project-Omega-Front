@@ -5,7 +5,7 @@ import Styled from 'styled-components';
 import {navigate} from 'hookrouter';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from '../../Icon';
 
 // components
 import Flex from '../../Flex';
@@ -18,7 +18,7 @@ export default ({username}) => {
         <>
             <Flex w="100%" j_content="flex-end" j_content_mobile="center">
                 <H1>
-                    <FontAwesomeIcon icon="user" color="#f7cc2f"/> Profile de {username}
+                    <Icon icon="user"/> Profile de {username}
                 </H1>
             </Flex>
             <Flex w="100%" j_content="space-between" a_items="space-between" j_content_mobile="center" f_wrap>

@@ -4,13 +4,12 @@ import React from 'react';
 import Styled from 'styled-components';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from '../../Icon';
 
 // components
 import Flex from '../../Flex';
 import H3 from '../../H3';
 import H4 from '../../H4';
-
 
 export default ({desc,location,show_verified}) => {
     return (
@@ -24,30 +23,30 @@ export default ({desc,location,show_verified}) => {
                     <H3>Information vérifiées</H3>
                     <div>
                         <Item>
-                            <FontAwesomeIcon icon="check" size="lg" color="#f7cc2f"/>
-                            <H4>Email</H4>
+                            <Icon icon="check"/>
+                            <span>Email</span>
                         </Item>
                         <Item>
-                            <FontAwesomeIcon icon="check" size="lg" color="#f7cc2f"/>
-                            <H4>Instagram</H4>
+                            <Icon icon="check"/>
+                            <span>Instagram</span>
                         </Item>
                     </div>
                 </Flex>
             }
 
             <Location>
-                <FontAwesomeIcon icon="map-marker-alt" size="lg" color="#f7cc2f"/>
-                <H4>{location}</H4>                
+                <Icon icon="map-marker-alt"/>
+                <span>{location}</span>                
             </Location>
         </>
     )
 };
 
-const Item = Styled.div`
+const Item = Styled(H4)`
     display: flex;
     align-items: center;
     
-    h4 {
+    span {
         margin-left: 10px;
     }
 `;

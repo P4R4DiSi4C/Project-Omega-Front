@@ -5,7 +5,7 @@ import Styled from 'styled-components';
 import { navigate } from 'hookrouter';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from '../Icon';
 
 // components
 import Flex from '../Flex';
@@ -19,17 +19,17 @@ export default ({data, theme, products_per_row}) => {
             <Flex w="100%" j_content={theme === 0 ? "space-between" : "flex-start"} j_content_mobile="center" f_wrap={theme === 0 ? true : false}>
                 {theme === 0 &&
                     <H2>
-                        <FontAwesomeIcon icon="store" color="#f7cc2f"/> MAGASIN VEDETTE
+                        <Icon icon="store" /> MAGASIN VEDETTE
                     </H2>
                 }
                 {theme === 1 &&
                     <H2>
-                        <FontAwesomeIcon icon="fire" color="#f7cc2f"/> PRODUITS PHARES
+                        <Icon icon="fire" /> PRODUITS PHARES
                     </H2>
                 }
                 {(theme === 0 || theme === 2) &&
-                    <ButtonStore width={theme === 2 ? "40%" : "auto"} onClick={() => navigate("/store/1")} color="#f7cc2f">
-                        {theme === 2 && <FontAwesomeIcon icon="store"/>} {data.store_name} <FontAwesomeIcon icon="chevron-right" />
+                    <ButtonStore width={theme === 2 ? "40%" : "auto"} onClick={() => navigate("/store/1")}>
+                        {theme === 2 && <Icon icon="store"/>} {data.store_name} <Icon icon="chevron-right" />
                     </ButtonStore>
                 }
             </Flex>

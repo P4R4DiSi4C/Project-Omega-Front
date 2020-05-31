@@ -13,5 +13,10 @@ export default (props) => {
 };
 
 const ModalBody = Styled.div`
-    padding-top: 2rem;
+    display:inherit;
+    flex-direction:inherit;
+    justify-content:inherit;
+    align-items:inherit;
+    padding-top: 1rem;
+    width: 100%;
 `;

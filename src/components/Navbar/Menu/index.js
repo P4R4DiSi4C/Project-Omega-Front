@@ -18,12 +18,12 @@ export default ({is_extended, toggle}) => {
     return (
         <>
             <FlexBtn className="hide_mobile" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
-                    <Button onClick={() => toggleModal()} bg_color="orange" color="white">Se connecter</Button>
+                    <Button onClick={() => toggleModal()} solid>Se connecter</Button>
             </FlexBtn>
 
             {is_extended &&
                 <FlexBtn className="hide_desktop" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
-                    <Button onClick={() => toggleModal()} bg_color="orange" color="white">Se connecter</Button>
+                    <Button onClick={() => toggleModal()} solid>Se connecter</Button>
                 </FlexBtn>
             }
 

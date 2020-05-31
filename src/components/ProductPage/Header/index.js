@@ -10,9 +10,9 @@ import Slider from "react-slick";
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SRLWrapper } from "simple-react-lightbox";
 
 // components
+import { SRLWrapper } from "simple-react-lightbox";
 import Flex from '../../Flex';
 import H3 from '../../H3';
 import Stars from '../../Profile/UserCard/stars';
@@ -153,15 +153,15 @@ export default ({data}) => {
                         j_content="space-between" 
                         j_content_mobile="space-between" 
                         f_wrap>
-                            <ButtonProfile color="#f7cc2f">
+                            <ButtonProfile>
                                 <span className="hide_mobile">ACHETER</span>
                                 <FontAwesomeIcon className="hide_desktop" icon="shopping-cart" size="lg"/>
                             </ButtonProfile>
-                            <ButtonProfile color="#f7cc2f">
+                            <ButtonProfile>
                                 <span className="hide_mobile">FAVORI</span>
                                 <FontAwesomeIcon className="hide_desktop" icon="bookmark" size="lg"/>
                             </ButtonProfile>
-                            <ContactBtn color="#f7cc2f">
+                            <ContactBtn>
                                 <span className="hide_mobile">CONTACTER</span>
                                 <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
                             </ContactBtn>
@@ -337,7 +337,7 @@ const SlideBtn = Styled.button`
     padding-left:2px;
     padding-right:2px;
     color:white;
-    background-color:#f7cc2f;
+    background-color:${props => props.theme.main};
     border:none;
     outline:none;
     cursor:pointer;

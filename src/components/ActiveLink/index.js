@@ -14,7 +14,7 @@ export default ({ className, children, href, exact }) => {
 
 const ActiveLink = Styled(A)`
     text-decoration: none;
-    color: ${props => props.is_active ? 'orange' : 'black'};
+    color: ${props => props.is_active ? props.theme.main : 'black'};
     font-weight: 550;
 
     &:hover{

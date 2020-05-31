@@ -6,7 +6,7 @@ import Flex from '../Flex';
 import {navigate} from 'hookrouter';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from '../Icon';
 
 // components
 import H3 from '../H3';
@@ -24,8 +24,8 @@ export default ({product_data, display_store_name, products_per_row}) => {
         <FlexProduct onClick={() => navigate("/product/" + product_data.id)} w={width} w_mobile="45%" j_content="flex-start" a_items="flex-start" d="column">
             {display_store_name === true &&
                 <H3>
-                    <FontAwesomeIcon icon="store" color="#f7cc2f"/> {product_data.store_name}
-                </H3>       
+                    <Icon icon="store" /> {product_data.store_name}
+                </H3>      
             }
             <FlexImg w="100%">
                 <Image src={product_data.img} />

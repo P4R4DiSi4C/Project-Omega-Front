@@ -20,15 +20,15 @@ export default ({profile_pic,username,stars,theme}) => {
                 <Image src={profile_pic} />
             </FlexImg>
             <FlexButtons w="100%" j_content="space-between" j_content_mobile="center" f_wrap>
-                <ButtonProfile color="#f7cc2f">
+                <ButtonProfile>
                     <span className="hide_mobile">SUIVRE</span>
                     <FontAwesomeIcon className="hide_desktop" icon="user-plus" size="lg"/>
                 </ButtonProfile>
-                <ButtonProfile color="#f7cc2f">
+                <ButtonProfile>
                     <span className="hide_mobile">FAVORI</span>
                     <FontAwesomeIcon className="hide_desktop" icon="bookmark" size="lg"/>
                 </ButtonProfile>
-                <ContactBtn color="#f7cc2f">
+                <ContactBtn>
                     <span className="hide_mobile">CONTACTER</span>
                     <FontAwesomeIcon className="hide_desktop" icon="envelope" size="lg"/>
                 </ContactBtn>

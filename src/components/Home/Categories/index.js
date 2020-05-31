@@ -4,7 +4,7 @@ import React from 'react';
 import Styled from 'styled-components';
 
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from '../../Icon';
 
 // components
 import Flex from '../../Flex';
@@ -16,7 +16,7 @@ export default () => {
         <>
             <Flex w="100%" j_content="flex-start">
                 <H2>
-                    <FontAwesomeIcon icon="list" color="#f7cc2f"/> Catégories
+                    <Icon icon="list"/> Catégories
                 </H2>
             </Flex>
             <FlexCat w="100%" j_content="space-around" j_content_mobile="space-between" f_wrap>
