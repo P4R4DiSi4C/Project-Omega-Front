@@ -2,7 +2,7 @@ import React from 'react';
 
 // libs
 import Styled from 'styled-components';
-import { navigate } from 'hookrouter';
+import { navigate } from 'raviger';
 
 // icons
 import Icon from '../Icon';

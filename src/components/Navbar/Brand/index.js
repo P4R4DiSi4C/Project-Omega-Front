@@ -1,7 +1,7 @@
 import React from 'react'
 import Styled from "styled-components";
 import Flex from '../../Flex';
-import {navigate} from 'hookrouter';
+import {navigate} from 'raviger';
 
 export default () => {
     return (

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 // libs
 import Styled from 'styled-components';
-import {navigate} from 'hookrouter';
+import {navigate} from 'raviger';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -25,7 +25,6 @@ function PrevArrow(props) {
     return (
       <SlideBtn
         onClick={onClick}
-        color="#f7cc2f"
         className="hide_mobile"
       >
             <FontAwesomeIcon icon="chevron-left" size="lg"/>
@@ -37,7 +36,6 @@ function NextArrow(props) {
     return (
       <SlideBtn
         onClick={onClick}
-        color="#f7cc2f"
         className="hide_mobile"
         style={{right:"0"}}
       >

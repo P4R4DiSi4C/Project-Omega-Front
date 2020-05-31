@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 // libs
 import Styled from 'styled-components';
+import {Link} from 'raviger';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,11 +13,8 @@ import Modal from '../../Modal';
 import ModalHeader from '../../Modal/header';
 import ModalBody from '../../Modal/body';
 import Button from '../../Button';
-import { A } from 'hookrouter';
-
 
 export default (props) => {
-
     const [userState, setUserState] = useState({
         email: '',
         password: ''
@@ -105,7 +103,7 @@ const FacebookBtn = Styled(SocialBtn)`
     background-color: #3b5998;
 `;
 
-const ForgotPW = Styled(A)`
+const ForgotPW = Styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.main};
 `;

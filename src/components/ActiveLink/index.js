@@ -1,7 +1,7 @@
 // libs
 import React from 'react';
 import Styled from 'styled-components';
-import { usePath, A } from 'hookrouter';
+import { usePath, Link } from 'raviger';
 
 export default ({ className, children, href, exact }) => {
   const path = usePath();
@@ -12,7 +12,7 @@ export default ({ className, children, href, exact }) => {
   );
 };
 
-const ActiveLink = Styled(A)`
+const ActiveLink = Styled(Link)`
     text-decoration: none;
     color: ${props => props.is_active ? props.theme.main : 'black'};
     font-weight: 550;

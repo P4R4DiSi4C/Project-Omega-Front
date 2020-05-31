@@ -8,7 +8,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "hookrouter": "1.2.3",
+    "raviger": "^1.4.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-id-swiper": "^3.0.0",

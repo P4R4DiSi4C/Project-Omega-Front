@@ -1,7 +1,7 @@
 // libs
 import React from 'react';
 import { useEffect } from "react";
-import { useRoutes } from "hookrouter";
+import { useRoutes } from 'raviger';
 // views
 import Home from './views/Home';
 import Store from './views/Store';
