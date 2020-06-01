@@ -5,6 +5,7 @@ import Modal from '../../Modal';
 
 import LoginBody from './LoginBody';
 import RegisterBody from './RegisterBody';
+import ForgotBody from './ForgotBody';
 
 export default (props) => {
     function get_content(){
@@ -14,11 +15,9 @@ export default (props) => {
 
             case "1":
                 return <RegisterBody />;
-            break;
     
             case "2":
-    
-            break;
+                return <ForgotBody />;
 
             default:
             break;

@@ -13,6 +13,9 @@ import Flex from '../../Flex';
 import ModalHeader from '../../Modal/header';
 import ModalBody from '../../Modal/body';
 import Button from '../../Button';
+import Link from '../../Form/link';
+import Form from '../../Form';
+import Input from '../../Form/input';
 
 export default (props) => {
     const [userState, setUserState] = useState({
@@ -51,9 +54,10 @@ export default (props) => {
                     <Flex 
                         w="100%"
                         j_content="space-between"
-                        a_items="flex-start"
-                    >
-                        <ForgotPW onClick={() => navigate(path, {m:1,c:1})}>Mot de passe oublié</ForgotPW>
+                        a_items="flex-start">
+                        <Link onClick={() => navigate(path, {m:1,c:2})}>
+                            Mot de passe oublié
+                        </Link>
                         <SubmitBtn solid>
                             Se connecter
                         </SubmitBtn>
@@ -62,8 +66,7 @@ export default (props) => {
                 <Label>Continuer avec:</Label>
                 <FlexSocialBtn
                     w="100%"
-                    j_content="space-between"
-                >
+                    j_content="space-between">
                     <FacebookBtn solid>
                         <FontAwesomeIcon icon={['fab', 'facebook-f']} /> Facebook
                     </FacebookBtn>
@@ -72,7 +75,7 @@ export default (props) => {
                     </GoogleBtn>
                 </FlexSocialBtn>
                 <Label>Pas encore de compte ? Inscris-toi vite !</Label>   
-                <RegisterBtn solid>
+                <RegisterBtn solid onClick={() => navigate(path, {m:1,c:1})}>
                         S'inscrire
                 </RegisterBtn>
             </ModalBody>
@@ -104,26 +107,6 @@ const GoogleBtn = Styled(SocialBtn)`
 const FacebookBtn = Styled(SocialBtn)`
     border: none;
     background-color: #3b5998;
-`;
-
-const ForgotPW = Styled.span`
-    text-decoration: none;
-    cursor: pointer;
-    color: ${props => props.theme.main};
-`;
-
-const Input = Styled.input`
-    width:100%;
-    border-radius: 2rem;
-    line-height: 2.5rem;
-    margin-bottom: 1rem;
-    outline:none;
-    text-indent: 2rem;
-`;
-
-const Form = Styled.form`
-    text-align: center;
-    margin-bottom: 1rem;
 `;
 
 const SubmitBtn = Styled(Button)`
