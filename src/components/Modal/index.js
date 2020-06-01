@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 
+import {navigate, usePath} from 'raviger';
+
 // libs
 import Styled from 'styled-components';
 
@@ -7,24 +9,25 @@ export default (props) => {
 
     // Disable body scroll
     useEffect(() => {
-        props.is_open && (document.body.style.overflow = 'hidden');
-        !props.is_open && (document.body.style.overflow = '');
-    }, [props.is_open]);
+        document.body.style.overflow = 'hidden';
+    });
 
+    function close_modal(){ 
+        document.body.style.overflow = '';
+        navigate(path);
+    };
+
+    const path = usePath();
     return (
         <>
-            { props.is_open &&
-            <>
-                <Backdrop onClick={() => props.toggle_modal()}>
-                    <Modal onClick={(e) => {
-                        //stop clicks getting to the overlay
-                        e.stopPropagation();
-                    }}>
-                        {props.children}
-                    </Modal>
-                </Backdrop>
-            </>
-            }
+            <Backdrop onClick={() => close_modal()}>
+                <Modal onClick={(e) => {
+                    //stop clicks getting to the overlay
+                    e.stopPropagation();
+                }}>
+                    {props.children}
+                </Modal>
+            </Backdrop>
         </>
     );
 };

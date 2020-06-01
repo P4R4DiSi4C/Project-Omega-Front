@@ -1,4 +1,6 @@
-import React, {useState, useCallback} from 'react'
+import React from 'react'
+
+import {usePath, navigate} from 'raviger';
 
 // libs
 import Styled from 'styled-components';
@@ -7,30 +9,28 @@ import Styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // components
-import LoginModal from './LoginModal.js';
 import Button from '../../Button';
 import Flex from '../../Flex';
 
 export default ({is_extended, toggle}) => {
-    const [login_modal, setModal] = useState(false);
-    const toggleModal = useCallback(() => setModal(!login_modal), [login_modal]);
+    const path = usePath();
 
     return (
         <>
             <FlexBtn className="hide_mobile" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
-                    <Button onClick={() => toggleModal()} solid>Se connecter</Button>
+                    <Button onClick={() => navigate(path, {m:1,c:0})} solid>Se connecter</Button>
             </FlexBtn>
 
             {is_extended &&
                 <FlexBtn className="hide_desktop" w="20%" w_mobile="100%" j_content_mobile="center" j_content="flex-end">
-                    <Button onClick={() => toggleModal()} solid>Se connecter</Button>
+                    <Button onClick={() => navigate(path, {m:1,c:0})} solid>Se connecter</Button>
                 </FlexBtn>
             }
 
             <FlexHamburger w="20%" j_content="flex-end">
                 <FontAwesomeIcon icon={is_extended ? "times" : "bars"} size="lg" onClick={() => toggle()} />
             </FlexHamburger>
-            <LoginModal is_open={login_modal} toggle_modal={toggleModal} />
+            
         </>
     )
 };

@@ -1,7 +1,7 @@
 // libs
 import React from 'react';
 import { useEffect } from "react";
-import { useRoutes } from 'raviger';
+import { useRoutes} from 'raviger';
 // views
 import Home from './views/Home';
 import Store from './views/Store';
@@ -18,6 +18,7 @@ const routes = {
 const Routes = () => {
     const Routes = useRoutes(routes);
     useEffect(() => window.scrollTo(0, 0));
+
     return Routes || "Not Found";
   };
   

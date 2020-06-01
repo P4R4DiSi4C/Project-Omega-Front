@@ -36,7 +36,8 @@ export default ({data, theme, products_per_row}) => {
             <FlexProd w="100%" j_content="space-between" f_wrap>
                 {Object.keys(data.products).map((keyName, i) => (
                     <Product key={i} display_store_name={theme === 1 ? true : false} products_per_row={products_per_row} product_data={data.products[keyName]} />
-                ))}
+                ))
+                }
             </FlexProd>
         </Parent>
     )

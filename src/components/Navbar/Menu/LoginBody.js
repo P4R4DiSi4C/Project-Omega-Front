@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 
 // libs
 import Styled from 'styled-components';
-import {Link} from 'raviger';
+import {usePath, navigate} from 'raviger';
+
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // components
 import Flex from '../../Flex';
-import Modal from '../../Modal';
 import ModalHeader from '../../Modal/header';
 import ModalBody from '../../Modal/body';
 import Button from '../../Button';
@@ -24,9 +24,11 @@ export default (props) => {
     ...userState,
     [e.target.name]: [e.target.value],
     });
+    
+    const path = usePath();
 
     return(
-        <Modal is_open={props.is_open} toggle_modal={props.toggle_modal}>
+        <>
             <ModalHeader title="Connectes-toi sur Zodak !" sub_title="Notre plateforme te permets de vendre tes affaires rapidement et sans frais."/>
             <ModalBody>
                 <Form>       
@@ -51,7 +53,7 @@ export default (props) => {
                         j_content="space-between"
                         a_items="flex-start"
                     >
-                        <ForgotPW href="/">Mot de passe oublié</ForgotPW>
+                        <ForgotPW onClick={() => navigate(path, {m:1,c:1})}>Mot de passe oublié</ForgotPW>
                         <SubmitBtn solid>
                             Se connecter
                         </SubmitBtn>
@@ -74,7 +76,7 @@ export default (props) => {
                         S'inscrire
                 </RegisterBtn>
             </ModalBody>
-        </Modal>
+        </>
     );
 }
 
@@ -96,6 +98,7 @@ const SocialBtn = Styled(Button)`
 
 const GoogleBtn = Styled(SocialBtn)`
     border-color: #D44638;
+    color: #D44638;
 `;
 
 const FacebookBtn = Styled(SocialBtn)`
@@ -103,8 +106,9 @@ const FacebookBtn = Styled(SocialBtn)`
     background-color: #3b5998;
 `;
 
-const ForgotPW = Styled(Link)`
+const ForgotPW = Styled.span`
     text-decoration: none;
+    cursor: pointer;
     color: ${props => props.theme.main};
 `;
 

@@ -102,10 +102,10 @@ export default () => {
     return (
         <>
             {Object.keys(data).map((keyName, i) => (
-                <>
+                <div key={i}>
                     <Store key={i} data={data[keyName]} theme={2} products_per_row={5} />
-                    <Divider key={i} />
-                </>
+                    <Divider key={i+"divider"} />
+                </div>
             ))}
         </>
     )
