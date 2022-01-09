@@ -1,5 +1,5 @@
 # PROJECT OMEGA FRONTEND
-## Homemade prototype for https://dev.zodak.ch/ (Frontend project has been outsourced)
+<p>Homemade prototype for https://dev.zodak.ch/ (Frontend project has been outsourced and hosted in Azure DevOps)</p>
 
 ## Pics
 ![alt text](https://i.imgur.com/PKAUmvZ.png)
